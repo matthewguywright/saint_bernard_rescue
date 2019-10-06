@@ -1,0 +1,233 @@
+<style type="text/css">
+	td { padding: 5px; }
+	label { padding-right: 10px; }
+</style>
+<p class="bold">Before starting the application process, make sure you have read the <a href="adopt.php">Adoption Process</a>.</p>
+<h3>Adoption Application - 1</h3>
+<p>Please answer all questions as thoroughly as possible. We want to match your new family member as closely as possible.</p>
+<!--PAGE 1-->
+<form action="apply.php" method="post" name="adoptionForm1" id="adoptionForm1">
+  <table border="0" cellspacing="0" cellpadding="0" class="formTable">
+    <tr>
+      <td colspan="2" align="left" valign="top"><label for="name">Name</label>
+      <input name="name" type="text" id="name" size="40"></td>
+      <td colspan="3" align="left" valign="top"><label for="spouse">Spouse</label>
+      <input name="spouse" type="text" id="spouse" size="40"></td>
+    </tr>
+    <tr>
+      <td colspan="5" align="left" valign="top"><label for="address">Address</label>
+      <input name="address" type="text" id="address" size="100"></td>
+    </tr>
+    <tr>
+      <td colspan="2" align="left" valign="top"><label for="city">City</label>
+      <input type="text" name="city" id="city"></td>
+      <td colspan="2" align="left" valign="top"><label for="state">State</label>
+      <input type="text" name="state" id="state"></td>
+      <td width="26%" align="left" valign="top"><label for="zip">Zip</label>
+      <input type="text" name="zip" id="zip"></td>
+    </tr>
+    <tr>
+      <td colspan="5" align="left" valign="top">If less than 5 years at this address, please give previous address below:<br>
+      <textarea name="previousAddress" id="previousAddress" cols="60" rows="5"></textarea></td>
+    </tr>
+    <tr>
+      <td colspan="2" align="left" valign="top"><label for="homePhone">Home Phone</label>
+      <input type="text" name="homePhone" id="homePhone"></td>
+      <td colspan="3" align="left" valign="top"><label for="workPhone">Work Phone</label>
+      <input type="text" name="workPhone" id="workPhone"></td>
+    </tr>
+    <tr>
+      <td colspan="2" align="left" valign="top"><label for="email">E-mail</label>
+      <input name="email" type="text" id="email" size="30"></td>
+      <td colspan="3" align="left" valign="top"><label for="occupation">Occupation</label>
+      <input name="occupation" type="text" id="occupation" size="30"></td>
+    </tr>
+    <tr>
+      <td colspan="5" align="left" valign="top">Please list names and ages of all members of the household (list each member on a new line):<br>
+      <textarea name="houseMembers" id="houseMembers" cols="60" rows="5"></textarea></td>
+    </tr>
+    <tr>
+      <td colspan="5" align="left" valign="top">What other dogs have you owned in the last 3 years?</td>
+    </tr>
+    <tr>
+      <td width="14%" align="left" valign="top">Breed</td>
+      <td width="31%" align="left" valign="top">Sex</td>
+      <td width="9%" align="left" valign="top">Age</td>
+      <td width="20%" align="left" valign="top">Spayed/Neutered?</td>
+      <td align="left" valign="top">Still have the dog?</td>
+    </tr>
+    <tr>
+      <td align="left" valign="top"><input name="breed1" type="text" id="breed1" size="15"></td>
+      <td align="left" valign="top"><table width="100">
+        <tr>
+          <td><label>
+            <input type="radio" name="sex1" value="Male" id="sex1_0">
+            Male</label></td>
+        </tr>
+        <tr>
+          <td><label>
+            <input type="radio" name="sex1" value="Female" id="sex1_1">
+            Female</label></td>
+        </tr>
+      </table>      </td>
+      <td align="left" valign="top"><input name="age1" type="text" id="age1" size="10"></td>
+      <td align="left" valign="top"><table width="100">
+        <tr>
+          <td><label>
+            <input type="radio" name="spayNeuter1" value="Yes" id="spayNeuter1_0">
+            Yes</label></td>
+        </tr>
+        <tr>
+          <td><label>
+            <input type="radio" name="spayNeuter1" value="No" id="spayNeuter1_1">
+            No</label></td>
+        </tr>
+      </table>      </td>
+      <td align="left" valign="top"><table width="100">
+        <tr>
+          <td><label>
+            <input type="radio" name="stillHave1" value="Yes" id="stillHave1_0">
+            Yes</label></td>
+        </tr>
+        <tr>
+          <td><label>
+            <input type="radio" name="stillHave1" value="No" id="stillHave1_1">
+            No</label></td>
+        </tr>
+      </table>      </td>
+    </tr>
+    <tr>
+      <td align="left" valign="top"><input name="breed2" type="text" id="breed2" size="15"></td>
+      <td align="left" valign="top"><table width="100">
+        <tr>
+          <td><label>
+            <input type="radio" name="sex2" value="Male" id="sex2_0">
+            Male</label></td>
+        </tr>
+        <tr>
+          <td><label>
+            <input type="radio" name="sex2" value="Female" id="sex2_1">
+            Female</label></td>
+        </tr>
+      </table>      </td>
+      <td align="left" valign="top"><input name="age2" type="text" id="age2" size="10"></td>
+      <td align="left" valign="top"><table width="100">
+        <tr>
+          <td><label>
+            <input type="radio" name="spayNeuter2" value="Yes" id="spayNeuter2_0">
+            Yes</label></td>
+        </tr>
+        <tr>
+          <td><label>
+            <input type="radio" name="spayNeuter2" value="No" id="spayNeuter2_1">
+            No</label></td>
+        </tr>
+      </table>      </td>
+      <td align="left" valign="top"><table width="100">
+        <tr>
+          <td><label>
+            <input type="radio" name="stillHave2" value="Yes" id="stillHave2_0">
+            Yes</label></td>
+        </tr>
+        <tr>
+          <td><label>
+            <input type="radio" name="stillHave2" value="No" id="stillHave2_1">
+            No</label></td>
+        </tr>
+      </table>      </td>
+    </tr>
+    <tr>
+      <td align="left" valign="top"><input name="breed3" type="text" id="breed3" size="15"></td>
+      <td align="left" valign="top"><table width="100">
+        <tr>
+          <td><label>
+            <input type="radio" name="sex3" value="Male" id="sex3_0">
+            Male</label></td>
+        </tr>
+        <tr>
+          <td><label>
+            <input type="radio" name="sex3" value="Female" id="sex3_1">
+            Female</label></td>
+        </tr>
+      </table>      </td>
+      <td align="left" valign="top"><input name="age3" type="text" id="age3" size="10"></td>
+      <td align="left" valign="top"><table width="100">
+        <tr>
+          <td><label>
+            <input type="radio" name="spayNeuter3" value="Yes" id="spayNeuter3_0">
+            Yes</label></td>
+        </tr>
+        <tr>
+          <td><label>
+            <input type="radio" name="spayNeuter3" value="No" id="spayNeuter3_1">
+            No</label></td>
+        </tr>
+      </table>      </td>
+      <td align="left" valign="top"><table width="100">
+        <tr>
+          <td><label>
+            <input type="radio" name="stillHave3" value="Yes" id="stillHave3_0">
+            Yes</label></td>
+        </tr>
+        <tr>
+          <td><label>
+            <input type="radio" name="stillHave3" value="No" id="stillHave3_1">
+            No</label></td>
+        </tr>
+      </table>      </td>
+    </tr>
+    <tr>
+      <td colspan="5" align="left" valign="top">If you answered &quot;No&quot; to still having a dog listed above, state what happened to the dog:<br>
+      <textarea name="whatHappenedToDog" id="whatHappenedToDog" cols="60" rows="5"></textarea></td>
+    </tr>
+    <tr>
+      <td colspan="5" align="left" valign="top">Are your pets up to date on all shots?</td>
+    </tr>
+    <tr>
+      <td colspan="5" align="left" valign="top"><table width="100">
+        <tr>
+          <td><label>
+            <input type="radio" name="shotsUpToDate" value="Yes" id="shotsUpToDate_0">
+            Yes</label></td>
+        </tr>
+        <tr>
+          <td><label>
+            <input type="radio" name="shotsUpToDate" value="No" id="shotsUpToDate_1">
+            No</label></td>
+        </tr>
+      </table>      </td>
+    </tr>
+    <tr>
+      <td colspan="5" align="left" valign="top">Are your pets on heartworm preventative?</td>
+    </tr>
+    <tr>
+      <td colspan="5" align="left" valign="top"><table width="100">
+        <tr>
+          <td><label>
+            <input type="radio" name="onHeartworm" value="Yes" id="onHeartworm_0">
+            Yes</label></td>
+        </tr>
+        <tr>
+          <td><label>
+            <input type="radio" name="onHeartworm" value="No" id="onHeartworm_1">
+            No</label></td>
+        </tr>
+      </table>      </td>
+    </tr>
+    <tr>
+      <td colspan="5" align="left" valign="top">Do you have other pets? (list each pet on a new line):</td>
+    </tr>
+    <tr>
+      <td colspan="5" align="left" valign="top"><textarea name="otherPets" id="otherPets" cols="60" rows="5"></textarea></td>
+    </tr>
+    <tr>
+      <td colspan="5" align="left" valign="top">Double check all answers before submitting, you will not be able to go back to edit this page.</td>
+    </tr>
+    <tr>
+      <td colspan="5" align="left" valign="top"><input type="submit" name="submitStage1" id="submitStage1" value="Next Step" /></td>
+    </tr>
+  </table>
+	
+<!--PAGE 2-->
+
+</form>

@@ -1,0 +1,127 @@
+<style type="text/css">
+	fieldset { float: left; width: 550px; border: 1px solid #333333; }
+	label { float: left; padding-right: 10px; width: 100px; text-align:right; }
+	fieldset p { padding: 5px 0; margin: 0; }
+	#submit { margin-left: 110px; }
+</style>
+<script type="text/javascript">
+<!--
+function MM_validateForm() { //v4.0
+  if (document.getElementById){
+    var i,p,q,nm,test,num,min,max,errors='',args=MM_validateForm.arguments;
+    for (i=0; i<(args.length-2); i+=3) { test=args[i+2]; val=document.getElementById(args[i]);
+      if (val) { nm=val.name; if ((val=val.value)!="") {
+        if (test.indexOf('isEmail')!=-1) { p=val.indexOf('@');
+          if (p<1 || p==(val.length-1)) errors+='- '+nm+' must contain an e-mail address.\n';
+        } else if (test!='R') { num = parseFloat(val);
+          if (isNaN(val)) errors+='- '+nm+' must contain a number.\n';
+          if (test.indexOf('inRange') != -1) { p=test.indexOf(':');
+            min=test.substring(8,p); max=test.substring(p+1);
+            if (num<min || max<num) errors+='- '+nm+' must contain a number between '+min+' and '+max+'.\n';
+      } } } else if (test.charAt(0) == 'R') errors += '- '+nm+' is required.\n'; }
+    } if (errors) alert('The following error(s) occurred:\n'+errors);
+    document.MM_returnValue = (errors == '');
+} }
+//-->
+</script>
+<form action="<?php print $_SERVER['PHP_SELF']; ?>" method="post" name="contactForm" id="contactForm" onsubmit="MM_validateForm('FirstName','','R','LastName','','R','email','','RisEmail','phone','','R','address','','R','city','','R','state','','R','zip','','RisNum','comment','','R');return document.MM_returnValue">
+<fieldset>
+	<legend>Personal Information</legend>
+    <p><label for="FirstName">First Name</label><input name="FirstName" type="text" id="FirstName" size="30" />
+    </p>
+    <p><label for="LastName">Last Name</label><input name="LastName" type="text" id="LastName" size="30" />
+    </p>
+    <p><label for="email">E-Mail</label><input name="email" type="text" id="email" size="30" />
+    </p>
+    <p><label for="phone">Phone</label><input name="phone" type="text" id="phone" size="30" />
+    </p>
+    <p><label for="address">Address</label><input name="address" type="text" id="address" size="30" />
+    </p>
+    <p><label for="city">City</label><input name="city" type="text" id="city" size="30" />
+    </p>
+    <p><label for="state">State</label><input name="state" type="text" id="state" size="30" />
+    </p>
+    <p><label for="zip">Zip Code</label><input name="zip" type="text" id="zip" size="30" />
+    </p>
+    <p><label for="inquiry">Inquiry Type</label>
+    <select name="inquiry" id="inquiry">
+    <option value="Adoption">Adoption</option>
+    <option value="Foster">Foster</option>
+    <option value="Application Question">Application Question</option>
+    <option value="Comment">Comment</option>
+    <option value="Question">Question</option>
+    <option value="Misc">Misc</option>
+    <option value="Donation">Donation</option>
+    <option value="Sponsorship">Sponsorship</option>
+    </select>
+    </p>
+    <p><label for="comment">Comment</label><textarea name="comment" cols="40" rows="5" id="comment"></textarea>
+    </p>
+  <p>Serious inquiries only please. Make sure all fields are filled out.</p>
+    <p><input type="submit" name="submit" id="submit" value="Send Email" /></p>
+</fieldset>
+</form>
+
+
+        <!--<form id="contactForm" name="contactForm" method="post" action="<?php print $_SERVER['PHP_SELF']; ?>" onsubmit="MM_validateForm('FirstName','','R','LastName','','R','email','','RisEmail','phone','','R','address','','R','city','','R','state','','R','zip','','RisNum','comment','','R');return document.MM_returnValue">
+          <table id="contactTable" width="100%" border="0" cellspacing="0" cellpadding="0">
+            <tr>
+              <td width="19%" align="right" valign="top">                <label for="FirstName">First Name</label>              </td>
+              <td width="81%" align="left" valign="top"><input name="FirstName" type="text" id="FirstName" tabindex="1" size="30" /></td>
+            </tr>
+            <tr>
+              <td align="right" valign="top">                <label for="LastName">Last Name</label>              </td>
+              <td align="left" valign="top"><input name="LastName" type="text" id="LastName" tabindex="2" size="30" /></td>
+            </tr>
+            <tr>
+              <td align="right" valign="top"><label for="email">E-Mail</label></td>
+              <td align="left" valign="top"><input name="email" type="text" id="email" tabindex="3" size="50" /></td>
+            </tr>
+            <tr>
+              <td align="right" valign="top"><label for="phone">Phone</label></td>
+              <td align="left" valign="top"><input name="phone" type="text" id="phone" tabindex="4" size="15" /></td>
+            </tr>
+            <tr>
+              <td align="right" valign="top"><label for="address">Address</label></td>
+              <td align="left" valign="top"><input name="address" type="text" id="address" tabindex="5" size="30" /></td>
+            </tr>
+            <tr>
+              <td align="right" valign="top"><label for="city">City</label></td>
+              <td align="left" valign="top"><input name="city" type="text" id="city" tabindex="6" size="30" /></td>
+            </tr>
+            <tr>
+              <td align="right" valign="top"><label for="state">State</label></td>
+              <td align="left" valign="top"><input name="state" type="text" id="state" tabindex="7" size="20" /></td>
+            </tr>
+            <tr>
+              <td align="right" valign="top"><label for="zip">Zip Code</label></td>
+              <td align="left" valign="top"><input name="zip" type="text" id="zip" tabindex="8" size="10" /></td>
+            </tr>
+            <tr>
+              <td align="right" valign="top"><label for="inquiry">Inquiry Type</label></td>
+              <td align="left" valign="top"><select name="inquiry" id="inquiry" tabindex="9">
+                <option value="Adoption">Adoption</option>
+                <option value="Foster">Foster</option>
+                <option value="Application Question">Application Question</option>
+                <option value="Comment">Comment</option>
+                <option value="Question">Question</option>
+                <option value="Misc">Misc</option>
+                <option value="Donation">Donation</option>
+                <option value="Sponsorship">Sponsorship</option>
+                            </select></td>
+            </tr>
+            <tr>
+              <td align="right" valign="top"><label for="comment">Comment</label></td>
+              <td align="left" valign="top"><textarea name="comment" id="comment" cols="50" rows="5" tabindex="10"></textarea></td>
+            </tr>
+            <tr>
+              <td align="right" valign="top">&nbsp;</td>
+              <td align="left" valign="top">Serious inquiries only please. Make sure all fields are filled out.</td>
+            </tr>
+            <tr>
+              <td align="right" valign="top">&nbsp;</td>
+              <td align="left" valign="top">
+              <input type="submit" name="submit" id="submit" value="Send Email" tabindex="11" /></td>
+            </tr>
+          </table>
+   	  </form>-->

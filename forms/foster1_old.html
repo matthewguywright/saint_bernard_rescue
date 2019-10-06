@@ -1,0 +1,425 @@
+<style type="text/css">
+	td { padding: 5px; }
+	label { padding-right: 10px; }
+</style>
+<script type="text/javascript">
+<!--
+function MM_validateForm() { //v4.0
+  if (document.getElementById){
+    var i,p,q,nm,test,num,min,max,errors='',args=MM_validateForm.arguments;
+    for (i=0; i<(args.length-2); i+=3) { test=args[i+2]; val=document.getElementById(args[i]);
+      if (val) { nm=val.name; if ((val=val.value)!="") {
+        if (test.indexOf('isEmail')!=-1) { p=val.indexOf('@');
+          if (p<1 || p==(val.length-1)) errors+='- '+nm+' must contain an e-mail address.\n';
+        } else if (test!='R') { num = parseFloat(val);
+          if (isNaN(val)) errors+='- '+nm+' must contain a number.\n';
+          if (test.indexOf('inRange') != -1) { p=test.indexOf(':');
+            min=test.substring(8,p); max=test.substring(p+1);
+            if (num<min || max<num) errors+='- '+nm+' must contain a number between '+min+' and '+max+'.\n';
+      } } } else if (test.charAt(0) == 'R') errors = 'Make sure all fields are filled out and check boxes are checked. If a field does not pertain to you, put \"n/a\" or a zero.\n'; }
+    } if (errors) alert('Check application:\n'+errors);
+    document.MM_returnValue = (errors == '');
+} }
+//-->
+</script>
+<p class="bold">Before starting the application process, make sure you have read the <a href="foster.php">Foster Care Process</a>.</p>
+<h3>Foster Application - 1</h3>
+<p>Please answer all questions as thoroughly as possible. We want to match your new family member as closely as possible.</p>
+<form action="apply.php" method="post" name="fosterForm1" id="fosterForm1" onsubmit="MM_validateForm('Name','','R','numAdults','','R','whoWillCare','','R','phone','','R','cellPhone','','R','email','','RisEmail','whereWouldSaintSleep','','R','whoWillCare2','','R','signature1','','R','familMembers','','R','trainingMethod','','R');return document.MM_returnValue">
+  <table width="100%" border="0" cellspacing="0" cellpadding="0">
+    <tr>
+      <td colspan="3" align="left" valign="top"><label for="Name">Name</label>
+      <input name="Name" type="text" id="Name" size="30" /></td>
+    </tr>
+    <tr>
+      <td colspan="3" align="left" valign="top">Please indicate the following about your household</td>
+    </tr>
+    <tr>
+      <td width="27%" align="left" valign="top"><label for="numAdults"># Adults</label>
+      <input name="numAdults" type="text" id="numAdults" size="15" /></td>
+      <td width="29%" align="left" valign="top"><label for="numChildren"># Children</label>
+      <input name="numChildren" type="text" id="numChildren" size="15" /></td>
+      <td width="44%" align="left" valign="top"><label for="ageChildren">Ages of children</label>
+      <input name="ageChildren" type="text" id="ageChildren" size="30" /></td>
+    </tr>
+    <tr>
+      <td align="left" valign="top">Is everyone in your household agreeable to you working with rescue dogs?</td>
+      <td colspan="2" align="left" valign="top"><table width="200">
+        <tr>
+          <td><label>
+            <input type="radio" name="houseAgree" value="Yes" id="houseAgree_0" />
+            Yes</label></td>
+        </tr>
+        <tr>
+          <td><label>
+            <input type="radio" name="houseAgree" value="No" id="houseAgree_1" />
+            No</label></td>
+        </tr>
+      </table>      </td>
+    </tr>
+    <tr>
+      <td align="left" valign="top">If you have children, will you teach them to love and care for your Saints in a humane manner?</td>
+      <td colspan="2" align="left" valign="top"><table width="200">
+        <tr>
+          <td><label>
+            <input type="radio" name="teachChildren" value="Yes" id="teachChildren_0" />
+            Yes</label></td>
+        </tr>
+        <tr>
+          <td><label>
+            <input type="radio" name="teachChildren" value="No" id="teachChildren_1" />
+            No</label></td>
+        </tr>
+      </table>      </td>
+    </tr>
+    <tr>
+      <td align="left" valign="top">Does anyone in your household have allergies?</td>
+      <td colspan="2" align="left" valign="top"><table width="200">
+        <tr>
+          <td><label>
+            <input type="radio" name="allergies" value="Yes" id="allergies_0" />
+            Yes</label></td>
+        </tr>
+        <tr>
+          <td><label>
+            <input type="radio" name="allergies" value="No" id="allergies_1" />
+            No</label></td>
+        </tr>
+      </table>      </td>
+    </tr>
+    <tr>
+      <td align="left" valign="top">Which members of your family will feed/care for the Saints?</td>
+      <td colspan="2" align="left" valign="top"><input name="whoWillCare" type="text" id="whoWillCare" size="50" /></td>
+    </tr>
+    <tr>
+      <td align="left" valign="top">Does anyone in your home dislike dogs or other animals?</td>
+      <td colspan="2" align="left" valign="top"><table width="200">
+        <tr>
+          <td><label>
+            <input type="radio" name="dislikeDogs" value="Yes" id="dislikeDogs_0" />
+            Yes</label></td>
+        </tr>
+        <tr>
+          <td><label>
+            <input type="radio" name="dislikeDogs" value="No" id="dislikeDogs_1" />
+            No</label></td>
+        </tr>
+      </table>      </td>
+    </tr>
+    <tr>
+      <td colspan="3" align="left" valign="top">Please list the names, ages, and relationship of all family members in the household (list each member on a new line):</td>
+    </tr>
+    <tr>
+      <td colspan="3" align="left" valign="top"><textarea name="familMembers" id="familMembers" cols="60" rows="5"></textarea></td>
+    </tr>
+    <tr>
+      <td align="left" valign="top"><label for="phone">Phone</label>
+      <input name="phone" type="text" id="phone" size="15" /></td>
+      <td colspan="2" align="left" valign="top"><label for="cellPhone">Cell Phone</label>
+      <input name="cellPhone" type="text" id="cellPhone" size="15" /></td>
+    </tr>
+    <tr>
+      <td colspan="3" align="left" valign="top"><label for="email">E-Mail</label>
+      <input name="email" type="text" id="email" size="50" /></td>
+    </tr>
+    <tr>
+      <td align="left" valign="top">I live in a:</td>
+      <td colspan="2" align="left" valign="top"><table width="200">
+        <tr>
+          <td><label>
+            <input type="radio" name="homeType" value="House" id="homeType_0" />
+            House</label></td>
+        </tr>
+        <tr>
+          <td><label>
+            <input type="radio" name="homeType" value="Apartment" id="homeType_1" />
+            Apartment</label></td>
+        </tr>
+        <tr>
+          <td><label>
+            <input type="radio" name="homeType" value="Condo" id="homeType_2" />
+            Condo</label></td>
+        </tr>
+        <tr>
+          <td><label>
+            <input type="radio" name="homeType" value="Mobile Home" id="homeType_3" />
+            Mobile Home</label></td>
+        </tr>
+        <tr>
+          <td><label>
+            <input type="radio" name="homeType" value="Farm" id="homeType_4" />
+            Farm</label></td>
+        </tr>
+      </table>      </td>
+    </tr>
+    <tr>
+      <td align="left" valign="top">Do you rent or own your household?</td>
+      <td colspan="2" align="left" valign="top"><table width="200">
+        <tr>
+          <td><label>
+            <input type="radio" name="rentOrOwn" value="Rent" id="rentOrOwn_0" />
+            Rent</label></td>
+        </tr>
+        <tr>
+          <td><label>
+            <input type="radio" name="rentOrOwn" value="Own" id="rentOrOwn_1" />
+            Own</label></td>
+        </tr>
+      </table>      </td>
+    </tr>
+    <tr>
+      <td colspan="3" align="left" valign="top">If rent, list the landlord's information.</td>
+    </tr>
+    <tr>
+      <td colspan="3" align="left" valign="top"><label for="landlordName">Landlord's Name</label>
+      <input name="landlordName" type="text" id="landlordName" size="30" /></td>
+    </tr>
+    <tr>
+      <td colspan="3" align="left" valign="top"><label for="landlordAddress">Landlord's Address</label>
+      <input name="landlordAddress" type="text" id="landlordAddress" size="50" /></td>
+    </tr>
+    <tr>
+      <td colspan="3" align="left" valign="top"><label for="landlordPhone">Landlord's Phone</label>
+      <input name="landlordPhone" type="text" id="landlordPhone" size="15" /></td>
+    </tr>
+    <tr>
+      <td colspan="3" align="left" valign="top">If renting, be advised that you must provide written documentation to SBRF from your landlord confirming that you are authorized to house and maintain pets on the property(i.e., letter from landlord, pet addendum, or proof of pet deposits).</td>
+    </tr>
+    <tr>
+      <td colspan="3" align="left" valign="top">If you have a fenced yard, please provide details.</td>
+    </tr>
+    <tr>
+      <td colspan="3" align="left" valign="top"><label for="fenceHeight">Height of fence</label>
+      <input name="fenceHeight" type="text" id="fenceHeight" size="30" /></td>
+    </tr>
+    <tr>
+      <td colspan="3" align="left" valign="top"><label for="fenceType">Type of fence</label>
+      <input name="fenceType" type="text" id="fenceType" size="30" /></td>
+    </tr>
+    <tr>
+      <td colspan="3" align="left" valign="top"><label for="fenceAreaSize">Size of fenced in area</label>
+      <input name="fenceAreaSize" type="text" id="fenceAreaSize" size="30" /></td>
+    </tr>
+    <tr>
+      <td align="left" valign="top">If your yard is not currently fenced, are you willing to install a fence or leash walk at all times?</td>
+      <td colspan="2" align="left" valign="top"><table width="200">
+        <tr>
+          <td><label>
+            <input type="radio" name="leashWalk" value="Yes" id="leashWalk_0" />
+            Yes</label></td>
+        </tr>
+        <tr>
+          <td><label>
+            <input type="radio" name="leashWalk" value="No" id="leashWalk_1" />
+            No</label></td>
+        </tr>
+      </table>      </td>
+    </tr>
+    <tr>
+      <td align="left" valign="top">Do you feel it is acceptable to let a dog roam freely?</td>
+      <td colspan="2" align="left" valign="top"><table width="200">
+          <tr>
+            <td><label>
+              <input type="radio" name="roamFreely" value="Yes" id="roamFreely_0" />
+              Yes</label></td>
+          </tr>
+          <tr>
+            <td><label>
+              <input type="radio" name="roamFreely" value="No" id="roamFreely_1" />
+              No</label></td>
+          </tr>
+      </table></td>
+    </tr>
+    <tr>
+      <td align="left" valign="top">Have you obedience trained a dog?</td>
+      <td colspan="2" align="left" valign="top"><table width="200">
+        <tr>
+          <td><label>
+            <input type="radio" name="obedienceTrained" value="Yes" id="obedienceTrained_0" />
+            Yes</label></td>
+        </tr>
+        <tr>
+          <td><label>
+            <input type="radio" name="obedienceTrained" value="No" id="obedienceTrained_1" />
+            No</label></td>
+        </tr>
+      </table>      </td>
+    </tr>
+    <tr>
+      <td align="left" valign="top">Are you willing to housebreak a dog?</td>
+      <td colspan="2" align="left" valign="top"><table width="200">
+        <tr>
+          <td><label>
+            <input type="radio" name="houseBreak" value="Yes" id="houseBreak_0" />
+            Yes</label></td>
+        </tr>
+        <tr>
+          <td><label>
+            <input type="radio" name="houseBreak" value="No" id="houseBreak_1" />
+            No</label></td>
+        </tr>
+      </table>      </td>
+    </tr>
+    <tr>
+      <td colspan="3" align="left" valign="top"><label for="whereWouldSaintSleep">During the night, the Saint would sleep where?</label>
+      <input name="whereWouldSaintSleep" type="text" id="whereWouldSaintSleep" size="30" /></td>
+    </tr>
+    <tr>
+      <td colspan="3" align="left" valign="top">When you go away for a few days, who will care for the dog?</td>
+    </tr>
+    <tr>
+      <td colspan="3" align="left" valign="top"><input name="whoWillCare2" type="text" id="whoWillCare2" size="60" /></td>
+    </tr>
+    <tr>
+      <td colspan="3" align="left" valign="top">Explain what training method and collars you prefer:</td>
+    </tr>
+    <tr>
+      <td colspan="3" align="left" valign="top"><textarea name="trainingMethod" id="trainingMethod" cols="60" rows="2"></textarea></td>
+    </tr>
+    <tr>
+      <td align="left" valign="top">Do you realize that Saints shed profusely (especially during the summer months), often drool or slobber, and rescue Saints often have behavioral problems?</td>
+      <td colspan="2" align="left" valign="top"><table width="200">
+        <tr>
+          <td><label>
+            <input type="radio" name="awareOfSaintProblems" value="Yes" id="awareOfSaintProblems_0" />
+            Yes</label></td>
+        </tr>
+        <tr>
+          <td><label>
+            <input type="radio" name="awareOfSaintProblems" value="No" id="awareOfSaintProblems_1" />
+            No</label></td>
+        </tr>
+      </table>      </td>
+    </tr>
+    <tr>
+      <td colspan="3" align="left" valign="top">Are you willing to foster a dog that:</td>
+    </tr>
+    <tr>
+      <td align="left" valign="top">Is 8 years of age or older?</td>
+      <td colspan="2" align="left" valign="top"><table width="200">
+        <tr>
+          <td><label>
+            <input type="radio" name="eightOrOlder" value="Yes" id="eightOrOlder_0" />
+            Yes</label></td>
+        </tr>
+        <tr>
+          <td><label>
+            <input type="radio" name="eightOrOlder" value="No" id="eightOrOlder_1" />
+            No</label></td>
+        </tr>
+      </table>      </td>
+    </tr>
+    <tr>
+      <td align="left" valign="top">Is not reliable with children?</td>
+      <td colspan="2" align="left" valign="top"><table width="200">
+        <tr>
+          <td><label>
+            <input type="radio" name="notReliableWithChildren" value="Yes" id="notReliableWithChildren_0" />
+            Yes</label></td>
+        </tr>
+        <tr>
+          <td><label>
+            <input type="radio" name="notReliableWithChildren" value="No" id="notReliableWithChildren_1" />
+            No</label></td>
+        </tr>
+      </table>      </td>
+    </tr>
+    <tr>
+      <td align="left" valign="top">Is physically handicapped?</td>
+      <td colspan="2" align="left" valign="top"><table width="200">
+        <tr>
+          <td><label>
+            <input type="radio" name="handicapped" value="Yes" id="handicapped_0" />
+            Yes</label></td>
+        </tr>
+        <tr>
+          <td><label>
+            <input type="radio" name="handicapped" value="No" id="handicapped_1" />
+            No</label></td>
+        </tr>
+      </table>      </td>
+    </tr>
+    <tr>
+      <td align="left" valign="top">Has been abused?</td>
+      <td colspan="2" align="left" valign="top"><table width="200">
+        <tr>
+          <td><label>
+            <input type="radio" name="abused" value="Yes" id="abused_0" />
+            Yes</label></td>
+        </tr>
+        <tr>
+          <td><label>
+            <input type="radio" name="abused" value="No" id="abused_1" />
+            No</label></td>
+        </tr>
+      </table>      </td>
+    </tr>
+    <tr>
+      <td align="left" valign="top">Requires ongoing medications?</td>
+      <td colspan="2" align="left" valign="top"><table width="200">
+        <tr>
+          <td><label>
+            <input type="radio" name="needsMeds" value="Yes" id="needsMeds_0" />
+            Yes</label></td>
+        </tr>
+        <tr>
+          <td><label>
+            <input type="radio" name="needsMeds" value="No" id="needsMeds_1" />
+            No</label></td>
+        </tr>
+      </table>      </td>
+    </tr>
+    <tr>
+      <td align="left" valign="top">On occasion, we recieve pairs of Saints that have bonded and need to remain together, would you consider fostering such a pair?</td>
+      <td colspan="2" align="left" valign="top"><table width="200">
+        <tr>
+          <td><label>
+            <input type="radio" name="bondedSaints" value="Yes" id="bondedSaints_0" />
+            Yes</label></td>
+        </tr>
+        <tr>
+          <td><label>
+            <input type="radio" name="bondedSaints" value="No" id="bondedSaints_1" />
+            No</label></td>
+        </tr>
+      </table>      </td>
+    </tr>
+    
+    <tr>
+      <td colspan="3" align="left" valign="top">&nbsp;</td>
+    </tr>
+    <tr>
+      <td colspan="3" align="left" valign="top">FOSTER CARE ACKNOWLEDGEMENT<br />
+      <br />
+      IN CONSIDERATION OF THE OPPORTUNITY TO FOSTER RESCUE DOGS, I AGREE TO THE FOLLOWING TERMS AND CONDITIONS, INCLUDING TO BE BOUND BY THEM:<br />
+      <br />
+      I ASSUME THE RISKS OF BEING BITTEN, SCRATCHED, KNOCKED DOWN, INJURED OR FRIGHTENED, BY DOGS OR PUPPIES, IN CONNECTION WITH MY FOSTER CARE WORK FOR SAINT BERNARD RESCUE FOUNDATION, INC. (HEREAFTER &quot;FOUNDATION&quot;). I AGREE THAT THE FOUNDATION IS NOT LIABLE TO ME OR OTHERS FOR ANY INJURIES, DAMAGES, LIABILITIES, LOSSES, JUDGEMENTS, COSTS OR EXPENSES WHATSOEVER, WHICH I OR OTHERS MIGHT SUFFER, OR SUSTAIN IN CONNECTION WITH THE PERFORMANCE OF MY FOSTER CARE ACTIVITIES FOR THE FOUNDATION, UNLESS THEY ARE THE RESULT OF THE FOUNDATION'S GROSS NEGLIGENCE OR INTENTIONAL MISCONDUCT. I WILL INDEMNIFY, DEFEND, AND HOLD HARMLESS THE FOUNDATION, ITS VOLUNTEERS, OFFICERS, DIRECTORS AND REPRESENTATIVES, FROM AND AGAINST ANY CLAIMS, LEGAL ACTIONS, INJURIES, DAMAGES, LOSSES, COSTS OR EXPENSES (INCLUDING ATTORNEY FEES) WHATSOEVER SUSTAINED BY ANY PROPERTY, ANIMAL OR PERSON IN CONNECTION WITH MY INTENTIONAL MISCONDUCT OR GROSSLY NEGLIGENT PERFORMANCE OF FOSTER CARE ACTIVITIES FOR THE FOUNDATION, OR MY BREACH OF THE FOUNDATION RULES, REGULATIONS, PROCEDURES, POLICIES, OR PROGRAMS.<br />
+      <br />
+      ALL OF THE INFORMATION I HAVE PROVIDED IN THIS APPLICATION IS, TO THE BEST OF MY KNOWLEDGE, TRUE AND COMPLETE. I UNDERSTAND THAT FALSIFYING ANSWERS IN THIS APPLICATION OR AT ANY OTHER TIME DURING THE FOSTER PROCESS DISQUALIFIES ME FROM FOSTER CARE.<br /></td>
+    </tr>
+    <tr>
+      <td colspan="3" align="left" valign="top">BY TYPING BELOW, YOU ARE SIGNING THIS DOCUMENT AND AGREEING TO THE TERMS LISTED ABOVE.</td>
+    </tr>
+    <tr>
+      <td colspan="3" align="left" valign="top">Signatures of foster person(s):</td>
+    </tr>
+    <tr>
+      <td align="left" valign="top"><input name="signature1" type="text" id="signature1" size="30" /></td>
+      <td colspan="2" align="left" valign="top"></td>
+    </tr>
+    <tr>
+      <td align="left" valign="top"><input name="signature2" type="text" id="signature2" size="30" /></td>
+      <td colspan="2" align="left" valign="top"></td>
+    </tr>
+    <tr>
+      <td colspan="3" align="left" valign="top">&nbsp;</td>
+    </tr>
+    
+    <tr>
+      <td colspan="3" align="left" valign="top">Double check all answers before submitting, you will not be able to go back to edit this page. You will receive a copy of this application via E-Mail with more details on what happens next. Thank you for your application.</td>
+    </tr>
+    <tr>
+      <td colspan="3" align="left" valign="top"><input type="submit" name="submitStage1" id="submitStage1" value="Submit Application" /></td>
+    </tr>
+  </table>
+</form>

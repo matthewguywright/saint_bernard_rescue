@@ -1,0 +1,203 @@
+<style type="text/css">
+	td { padding: 5px; }
+	label { padding-right: 10px; }
+</style>
+<script type="text/javascript">
+<!--
+function MM_validateForm() { //v4.0
+  if (document.getElementById){
+    var i,p,q,nm,test,num,min,max,errors='',args=MM_validateForm.arguments;
+    for (i=0; i<(args.length-2); i+=3) { test=args[i+2]; val=document.getElementById(args[i]);
+      if (val) { nm=val.name; if ((val=val.value)!="") {
+        if (test.indexOf('isEmail')!=-1) { p=val.indexOf('@');
+          if (p<1 || p==(val.length-1)) errors+='- '+nm+' must contain an e-mail address.\n';
+        } else if (test!='R') { num = parseFloat(val);
+          if (isNaN(val)) errors+='- '+nm+' must contain a number.\n';
+          if (test.indexOf('inRange') != -1) { p=test.indexOf(':');
+            min=test.substring(8,p); max=test.substring(p+1);
+            if (num<min || max<num) errors+='- '+nm+' must contain a number between '+min+' and '+max+'.\n';
+      } } } else if (test.charAt(0) == 'R') errors += '- '+nm+' is required.\n'; }
+    } if (errors) alert('The following error(s) occurred:\n'+'Make sure that all fields are filled out. Required fields are marked with an asterisk(*).');
+    document.MM_returnValue = (errors == '');
+} }
+//-->
+</script>
+<h3>Adoption Application - 2</h3>
+<p>Please answer all questions as thoroughly as possible. We want to match your new family member as closely as possible.</p>
+<div id="adoptDiv">
+<form action="apply.php" method="post" name="adoptionForm2" id="adoptionForm2" onsubmit="MM_validateForm('refName1','','R','refAddress1','','R','refPhone1','','R','refName2','','R','refAddress2','','R','refPhone2','','R','refName3','','R','refAddress3','','R','refPhone3','','R','whereLearned','','R','undesirableChar','','R');return document.MM_returnValue">
+<fieldset>
+	<legend>What are you looking for?</legend>
+    <div class="formLeft">
+    <p>How or where have you learned about this breed?</p>
+    <p><label for="whereLearned">Source</label><textarea name="whereLearned" cols="30" rows="3" id="whereLearned"></textarea>
+    *</p>
+    <p>Tell us what you're looking for.</p>
+<p>Coat length *</p><p>
+		  <label>
+		  <input type="radio" name="coatLength" value="Long" id="coatLength_0" />
+Long</label>
+
+		  <label>
+		  <input type="radio" name="coatLength" value="Short" id="coatLength_1" />
+Short</label>
+		  
+		  <label>
+		  <input type="radio" name="coatLength" value="Either" id="coatLength_2" />
+Either</label>
+		  <br />
+		</p>  
+<p>Sex *</p><p>
+		  <label>
+		  <input type="radio" name="desiredSex" value="Male" id="desiredSex_0" />
+Male</label>
+
+		  <label>
+		  <input type="radio" name="desiredSex" value="Female" id="desiredSex_1" />
+Female</label>
+		  <label>
+		  <input type="radio" name="desiredSex" value="Either" id="coatLength_2" />
+Either</label>
+		  <br />		  
+		</p>
+<p>Age (years) *</p><p>
+		  <label>
+		  <input type="radio" name="desiredAge" value="Less than 1" id="age_0" /> 
+		  &lt;1
+</label>
+
+		  <label>
+		  <input type="radio" name="desiredAge" value="1 to 3" id="age_1" />
+1 to 3</label>
+
+		  <label>
+		  <input type="radio" name="desiredAge" value="3 to 5" id="age_0" />
+3 to 5</label>
+
+		  <label>
+		  <input type="radio" name="desiredAge" value="5+" id="age_1" />
+5+</label>
+		  <br /><br />
+	  </p>
+      <p>Are you willing to adopt a dog that:</p>
+<p>Is 8 years of age or older? *</p><p>
+		  <label>
+		  <input type="radio" name="eightOrOlder" value="Yes" id="eightOrOlder_0" />
+Yes</label>
+
+		  <label>
+		  <input type="radio" name="eightOrOlder" value="No" id="eightOrOlder_1" />
+No</label>
+		  <br />
+		</p>      
+<p>Is not reliable with children? *</p><p>
+		  <label>
+		  <input type="radio" name="notReliableWithChildren" value="Yes" id="notReliableWithChildren_0" />
+Yes</label>
+
+		  <label>
+		  <input type="radio" name="notReliableWithChildren" value="No" id="notReliableWithChildren_1" />
+No</label>
+		  <br />
+		</p>    
+<p>Is physically handicapped? *</p><p>
+		  <label>
+		  <input type="radio" name="handicapped" value="Yes" id="handicapped_0" />
+Yes</label>
+
+		  <label>
+		  <input type="radio" name="handicapped" value="No" id="handicapped_1" />
+No</label>
+		  <br />
+		</p>
+<p>Has been abused? *</p><p>
+		  <label>
+		  <input type="radio" name="abused" value="Yes" id="abused_0" />
+Yes</label>
+
+		  <label>
+		  <input type="radio" name="abused" value="No" id="abused_1" />
+No</label>
+		  <br />
+		</p>
+<p>Requires ongoing medications? *</p><p>
+		  <label>
+		  <input type="radio" name="needsMeds" value="Yes" id="needsMeds_0" />
+Yes</label>
+
+		  <label>
+		  <input type="radio" name="needsMeds" value="No" id="needsMeds_1" />
+No</label>
+		  <br />
+		</p>
+        <p>On occasion we receive pairs of Saints that have bonded and need to remain together. Would you consider adopting such a pair? *</p>
+<p>
+		  <label>
+		  <input type="radio" name="bondedSaints" value="Yes" id="bondedSaints_0" />
+Yes</label>
+
+		  <label>
+		  <input type="radio" name="bondedSaints" value="No" id="bondedSaints_1" />
+No</label>
+<br /><br />
+		</p>
+        <p>If you have chosen a particular dog, would you be willing to take another if the dog you chose has a medical or other problem that would prohibit the adoption at this time? *</p>
+<p><label>
+		  <input type="radio" name="takeAnotherDog" value="Yes" id="takeAnotherDog_0" />
+Yes</label>
+		  <label>
+		  <input type="radio" name="takeAnotherDog" value="No" id="takeAnotherDog_1" />
+No</label>
+		  <br />
+		</p>
+        <p>Are you aware that Saint Bernard Rescue Foundation, Inc. requests an adoption fee for each adoption to help cover expenses in readying dogs for adoption? *</p>
+<p>
+		  <label>
+		  <input type="radio" name="awareOfFee" value="Yes" id="awareOfFee_0" />
+Yes</label>
+
+		  <label>
+		  <input type="radio" name="awareOfFee" value="No" id="awareOfFee_1" />
+No</label>
+		  <br /><br />
+		</p>
+<p>Are you prepared to pay this fee? *</p><p>
+		  <label>
+		  <input type="radio" name="payFee" value="Yes" id="payFee_0" />
+Yes</label>
+
+		  <label>
+		  <input type="radio" name="payFee" value="No" id="payFee_1" />
+No</label>
+		  <br />
+		</p>
+        <p>What characteristics do you find undesirable in a pet?</p>
+        <p><label for="undesirableChar">Characteristics</label><textarea name="undesirableChar" cols="30" rows="3" id="undesirableChar"></textarea>
+      *</p>        <p>Personal references - must include a neighbor and exclude relatives who are employed in a pet-related field. (all three are required)</p>
+        <p><label for="refName1">Name</label><input name="refName1" type="text" id="refName1" size="30" />
+      *</p>
+        <p><label for="refAddress1">Address</label><input name="refAddress1" type="text" id="refAddress1" size="40" />
+        *</p>
+        <p><label for="refPhone1">Phone</label><input name="refPhone1" type="text" id="refPhone1" size="15" />
+        *</p>
+        <br />
+        <p><label for="refName2">Name</label><input name="refName2" type="text" id="refName2" size="30" />
+      *</p>
+        <p><label for="refAddress2">Address</label><input name="refAddress2" type="text" id="refAddress2" size="40" />
+        *</p>
+        <p><label for="refPhone2">Phone</label><input name="refPhone2" type="text" id="refPhone2" size="15" />
+        *</p>
+        <br />
+        <p><label for="refName3">Name</label>
+      <input name="refName3" type="text" size="30" id="refName3" />
+      *</p>
+        <p><label for="refAddress3">Address</label><input name="refAddress3" type="text" id="refAddress3" size="40" />
+        *</p>
+        <p><label for="refPhone3">Phone</label><input name="refPhone3" type="text" id="refPhone3" size="15" />
+        *</p>
+        <p>Double check all answers before submitting, you will not be able to go back to edit this page.</p>
+        <p><input type="submit" name="submitStage2" id="submitStage2" value="Next Step"  onclick="return confirm('Submit Stage 2, are you sure?');" /></p>    
+        </div>
+</fieldset>
+</form>
+</div>

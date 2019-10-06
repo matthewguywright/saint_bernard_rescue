@@ -1,0 +1,321 @@
+<script type="text/javascript">
+<!--
+function MM_validateForm() { //v4.0
+  if (document.getElementById){
+    var i,p,q,nm,test,num,min,max,errors='',args=MM_validateForm.arguments;
+    for (i=0; i<(args.length-2); i+=3) { test=args[i+2]; val=document.getElementById(args[i]);
+      if (val) { nm=val.name; if ((val=val.value)!="") {
+        if (test.indexOf('isEmail')!=-1) { p=val.indexOf('@');
+          if (p<1 || p==(val.length-1)) errors+='- '+nm+' must contain an e-mail address.\n';
+        } else if (test!='R') { num = parseFloat(val);
+          if (isNaN(val)) errors+='- '+nm+' must contain a number.\n';
+          if (test.indexOf('inRange') != -1) { p=test.indexOf(':');
+            min=test.substring(8,p); max=test.substring(p+1);
+            if (num<min || max<num) errors+='- '+nm+' must contain a number between '+min+' and '+max+'.\n';
+      } } } else if (test.charAt(0) == 'R') errors += '- '+nm+' is required.\n'; }
+    } if (errors) alert('The following error(s) occurred:\n'+'Make sure that all fields are filled out. Required fields are marked with an asterisk(*).');
+    document.MM_returnValue = (errors == '');
+} }
+//-->
+</script>
+<p class="bold">Before starting the application process, make sure you have read the <a href="foster.php">Foster Care Process</a>.</p>
+<h3>Foster Application - 1</h3>
+<p>Please answer all questions as thoroughly as possible. We want to match your new family member as closely as possible.</p>
+<div id="fosterDiv">
+<form action="apply.php" method="post" name="fosterForm1" id="fosterForm1" onsubmit="MM_validateForm('Name','','R','email','','RisEmail','phone','','R','numAdults','','R','numChildren','','R','whoWillCare','','R','whereWouldSaintSleep','','R','whoWillCare2','','R','signature1','','R','familMembers','','R','trainingMethod','','R');return document.MM_returnValue">
+<fieldset>
+    	<legend>Personal Information</legend>
+        <div class="formLeft">
+        <p><label for="Name">Name</label><input name="Name" type="text" id="Name" size="30" />
+        *</p>
+        <p><label for="email">E-Mail</label><input name="email" type="text" id="email" size="30" />
+        *
+        </p>
+        <p><label for="addressBox">Address</label><textarea name="addressBox" id="addressBox" cols="20" rows="5"></textarea>
+        *</p>
+        <p><label for="phone">Phone</label><input name="phone" type="text" id="phone" size="15" />
+        *</p>
+        <p><label for="cellPhone">Cell Phone</label><input name="cellPhone" type="text" size="15" /></p>
+        </div>
+        <div class="formRight">
+        <p>Please indicate the following about your household.</p>
+        <p><label for="numAdults"># Adults</label><input name="numAdults" type="text" id="numAdults" size="10" />
+        *</p>
+        <p><label for="numChildren"># Children</label><input name="numChildren" type="text" id="numChildren" size="10" />
+        *</p>
+        <p><label for="ageChildren">Children's Ages</label><input name="ageChildren" type="text" size="30" /></p>
+        </div>
+        <div class="formLeft">
+        <p>Please list the names, ages, and relationship of all family members in the household (list each member on a new line):</p>
+        <p><label for="familMembers">Family Members</label><textarea name="familMembers" cols="30" rows="3" id="familMembers"></textarea>
+        *</p>
+        <p>Which member(s) of your family will feed/care for the Saints? <input name="whoWillCare" type="text" id="whoWillCare" size="30" />
+        *</p>
+        </div>
+    </fieldset>
+    <fieldset class="radios">
+    	<legend>General Information</legend>
+        <div class="formLeft">
+		<p>Is everyone in your household agreeable to you working with rescue dogs? *</p><p>
+		  <label>
+		  <input type="radio" name="houseAgree" value="Yes" id="houseAgree_0" />
+Yes</label>
+
+		  <label>
+		  <input type="radio" name="houseAgree" value="No" id="houseAgree_1" />
+No</label>
+		  <br />
+		</p>
+<p>If you have children, will you teach them to love and care for your Saints in a humane manner? *</p>
+<p>
+		  <label>
+		  <input type="radio" name="teachChildren" value="Yes" id="teachChildren_0" />
+Yes</label>
+
+		  <label>
+		  <input type="radio" name="teachChildren" value="No" id="teachChildren_1" />
+No</label>
+		  <br />
+		</p>
+<p>Does anyone in your household have allergies? *</p>
+<p>
+		  <label>
+		  <input type="radio" name="allergies" value="Yes" id="allergies_0" />
+Yes</label>
+
+		  <label>
+		  <input type="radio" name="allergies" value="No" id="allergies_1" />
+No</label>
+		  <br />
+		</p>  
+<p>Does anyone in your household dislike dogs or other animals? *</p>
+<p>
+		  <label>
+		  <input type="radio" name="dislikeDogs" value="Yes" id="dislikeDogs_0" />
+Yes</label>
+
+		  <label>
+		  <input type="radio" name="dislikeDogs" value="No" id="dislikeDogs_1" />
+No</label>
+		  <br />
+		</p>
+<p>I live in a: *</p>
+<p>
+  <label>
+  <input type="radio" name="homeType" value="House" id="homeType_0" />
+House</label>
+
+  <label>
+  <input type="radio" name="homeType" value="Apartment" id="homeType_1" />
+Apartment</label>
+
+  <label>
+  <input type="radio" name="homeType" value="Condo" id="homeType_2" />
+Condo</label>
+
+  <label>
+  <input type="radio" name="homeType" value="Mobile Home" id="homeType_3" />
+Mobile</label>
+
+  <label>
+  <input type="radio" name="homeType" value="Farm" id="homeType_4" />
+Farm</label>
+<br /><br />
+		</p>
+<p>Do you rent or own your house? *</p>
+<p>
+		  <label>
+		  <input type="radio" name="rentOrOwn" value="Rent" id="rentOrOwn_0" />
+Rent</label>
+
+		  <label>
+		  <input type="radio" name="rentOrOwn" value="Own" id="rentOrOwn_1" />
+Own</label>
+		  <br />
+		</p>
+        </div>
+    </fieldset>
+    <fieldset>
+    	<legend>Landlord's Information</legend>
+    <div class="formLeft">
+    <p>If rent, list the landlord's information.</p>
+    <p><label for="landlordName">Name</label><input name="landlordName" type="text" size="30" /></p>
+    <p><label for="landlordAddress">Address</label><input name="landlordAddress" type="text" size="40" /></p>  
+    <p><label for="fenceAreaSize">Phone</label>
+    <input name="landlordPhone" type="text" size="15" /></p>
+    <p>If renting, be advised that you must provide written documentation to SBRF from your landlord confirming that you are authorized to house and maintain pets on the property(i.e., letter from landlord, pet addendum, or proof of pet deposits).</p>            
+    </div>
+    </fieldset>
+    <fieldset>
+    	<legend>Yard Information</legend>
+        <div class="formLeft">
+        	<p>If you have a fenced yard, please provide details.</p>
+            <p><label for="fenceHeight">Fence Height</label><input name="fenceHeight" type="text" size="15" /></p>
+            <p><label for="fenceType">Fence Type</label><input name="fenceType" type="text" size="30" /></p>
+            <p><label for="fenceAreaSize">Fence Size</label>
+          <input name="fenceAreaSize" type="text" size="15" id="fenceAreaSize" />
+           (sq. ft.)</p>
+<p>If your yard is not currently fenced, are you willing to install a fence or leash walk at all times? *</p>
+<p>
+		  <label>
+		  <input type="radio" name="leashWalk" value="Yes" id="leashWalk_0" />
+Yes</label>
+
+		  <label>
+		  <input type="radio" name="leashWalk" value="No" id="leashWalk_1" />
+No</label>
+		  <br />
+		</p>            
+        </div>
+    </fieldset>
+    <fieldset>
+    	<legend>Training and Special Needs</legend>
+        <div class="formLeft">
+<p>Do you feel it is acceptable to let a dog roam freely? *</p>
+<p>
+		  <label>
+		  <input type="radio" name="roamFreely" value="Yes" id="roamFreely_0" />
+Yes</label>
+
+		  <label>
+		  <input type="radio" name="roamFreely" value="No" id="roamFreely_1" />
+No</label>
+		  <br />
+		</p>
+<p>Have you obedience trained a dog? *</p>
+<p>
+		  <label>
+		  <input type="radio" name="obedienceTrained" value="Yes" id="obedienceTrained_0" />
+Yes</label>
+
+		  <label>
+		  <input type="radio" name="obedienceTrained" value="No" id="obedienceTrained_1" />
+No</label>
+		  <br />
+		</p>
+<p>Are you willing to housebreak a dog? *</p>
+<p>
+		  <label>
+		  <input type="radio" name="houseBreak" value="Yes" id="houseBreak_0" />
+Yes</label>
+
+		  <label>
+		  <input type="radio" name="houseBreak" value="No" id="houseBreak_1" />
+No</label>
+		  <br />
+		</p>
+        <p>Do you realize that Saints shed profusely (especially during the summer months), often drool or slobber, and rescue Saints often have behavioral problems? *</p>
+        <p>		  
+        <label>
+		  <input type="radio" name="awareOfSaintProblems" value="Yes" id="awareOfSaintProblems_0" />
+Yes</label>
+
+		  <label>
+		  <input type="radio" name="awareOfSaintProblems" value="No" id="awareOfSaintProblems_1" />
+No</label>
+<br /><br />
+</p>
+		<p>During the night, where would the Saint sleep? <input name="whereWouldSaintSleep" type="text" id="whereWouldSaintSleep" size="30" />
+*</p>        
+        <p>When you go away for a few days, who will care for the dog? <input name="whoWillCare2" type="text" id="whoWillCare2" size="30" />
+*</p>        
+        <p>Explain what training method and collars you prefer.</p>
+        <p><label for="trainingMethod">Methods</label>
+        <textarea name="trainingMethod" cols="40" rows="3" id="trainingMethod"></textarea>
+         *</p>
+        <p>Are you willing to foster a dog that:</p>
+<p>Is 8 years of age or older? *</p>
+<p>
+		  <label>
+		  <input type="radio" name="eightOrOlder" value="Yes" id="eightOrOlder_0" />
+Yes</label>
+
+		  <label>
+		  <input type="radio" name="eightOrOlder" value="No" id="eightOrOlder_1" />
+No</label>
+		  <br />
+		</p>
+<p>Is not reliable with children? *</p>
+<p>
+		  <label>
+		  <input type="radio" name="notReliableWithChildren" value="Yes" id="notReliableWithChildren_0" />
+Yes</label>
+
+		  <label>
+		  <input type="radio" name="notReliableWithChildren" value="No" id="notReliableWithChildren_1" />
+No</label>
+		  <br />
+		</p>
+<p>On occasion, we recieve pairs of Saints that have bonded and need to remain together, would you consider fostering such a pair? *</p>
+<p>
+		  <label>
+		  <input type="radio" name="bondedSaints" value="Yes" id="bondedSaints_0" />
+Yes</label>
+
+		  <label>
+		  <input type="radio" name="bondedSaints" value="No" id="bondedSaints_1" />
+No</label>
+		  <br />
+		</p>
+<p>Is physically handicapped? *</p>
+<p>
+		  <label>
+		  <input type="radio" name="handicapped" value="Yes" id="handicapped_0" />
+Yes</label>
+
+		  <label>
+		  <input type="radio" name="handicapped" value="No" id="handicapped_1" />
+No</label>
+		  <br />
+		</p>
+<p>Has been abused? *</p>
+<p>
+		  <label>
+		  <input type="radio" name="abused" value="Yes" id="abused_0" />
+Yes</label>
+
+		  <label>
+		  <input type="radio" name="abused" value="No" id="abused_1" />
+No</label>
+		  <br />
+		</p>
+<p>Requires ongoing medications? *</p>
+<p>
+		  <label>
+		  <input type="radio" name="needsMeds" value="Yes" id="needsMeds_0" />
+Yes</label>
+
+		  <label>
+		  <input type="radio" name="needsMeds" value="No" id="needsMeds_1" />
+No</label>
+		  <br />
+		</p>                        
+        </div>
+    </fieldset>
+    <fieldset>
+    	<legend>Foster Care Acknowledgement</legend>
+        <div class="formLeft">
+        	<p>IN CONSIDERATION OF THE OPPORTUNITY TO FOSTER RESCUE DOGS, I AGREE TO THE FOLLOWING TERMS AND CONDITIONS, INCLUDING TO BE BOUND BY THEM:</p>
+            <p>I ASSUME THE RISKS OF BEING BITTEN, SCRATCHED, KNOCKED DOWN, INJURED OR FRIGHTENED, BY DOGS OR PUPPIES, IN CONNECTION WITH MY FOSTER CARE WORK FOR SAINT BERNARD RESCUE FOUNDATION, INC. (HEREAFTER &quot;FOUNDATION&quot;). I AGREE THAT THE FOUNDATION IS NOT LIABLE TO ME OR OTHERS FOR ANY INJURIES, DAMAGES, LIABILITIES, LOSSES, JUDGEMENTS, COSTS OR EXPENSES WHATSOEVER, WHICH I OR OTHERS MIGHT SUFFER, OR SUSTAIN IN CONNECTION WITH THE PERFORMANCE OF MY FOSTER CARE ACTIVITIES FOR THE FOUNDATION, UNLESS THEY ARE THE RESULT OF THE FOUNDATION'S GROSS NEGLIGENCE OR INTENTIONAL MISCONDUCT. I WILL INDEMNIFY, DEFEND, AND HOLD HARMLESS THE FOUNDATION, ITS VOLUNTEERS, OFFICERS, DIRECTORS AND REPRESENTATIVES, FROM AND AGAINST ANY CLAIMS, LEGAL ACTIONS, INJURIES, DAMAGES, LOSSES, COSTS OR EXPENSES (INCLUDING ATTORNEY FEES) WHATSOEVER SUSTAINED BY ANY PROPERTY, ANIMAL OR PERSON IN CONNECTION WITH MY INTENTIONAL MISCONDUCT OR GROSSLY NEGLIGENT PERFORMANCE OF FOSTER CARE ACTIVITIES FOR THE FOUNDATION, OR MY BREACH OF THE FOUNDATION RULES, REGULATIONS, PROCEDURES, POLICIES, OR PROGRAMS.</p>
+            <p>ALL OF THE INFORMATION I HAVE PROVIDED IN THIS APPLICATION IS, TO THE BEST OF MY KNOWLEDGE, TRUE AND COMPLETE. I UNDERSTAND THAT FALSIFYING ANSWERS IN THIS APPLICATION OR AT ANY OTHER TIME DURING THE FOSTER PROCESS DISQUALIFIES ME FROM FOSTER CARE.</p>
+            <p>BY TYPING BELOW, YOU ARE SIGNING THIS DOCUMENT AND AGREEING TO THE TERMS LISTED ABOVE.</p>
+            <p>Signatures of foster person(s):</p>
+            <p><label for="signature1">X</label><input name="signature1" type="text" id="signature1" size="30" />
+*</p>
+          <p><label for="signature2">X</label><input name="signature2" type="text" size="30" /></p>
+            <p>Would you like to be added to our E-Mail Group?</p>
+            
+		  <p><label>
+		  <input type="radio" name="mailingList" value="Yes" id="mailingList_0" />
+Yes</label>
+		  <label>
+		  <input type="radio" name="mailingList" value="No" id="mailingList_1" />
+No</label>
+		  <br />
+		</p>
+            <p>Double check all answers before submitting, you will not be able to go back to edit this page. You will receive a copy of this application via E-Mail with more details on what happens next. Thank you for your application.</p>
+            <p><input type="submit" name="submitStage1" id="submitStage1" value="Submit Application" onclick="return confirm('Submit application, are you sure? Is everything filled out completely and accurately?');" /></p>
+        </div>
+    </fieldset>
+</form>
+</div>

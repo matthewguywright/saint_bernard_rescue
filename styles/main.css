@@ -1,0 +1,273 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*THIS IS THE NORMALIZING CODE FOR ALL BROWSERS-------------------------------------------------*/
+
+/*Normalizes margin and padding*/
+body, div, dl, dt, dd, ul, ol, li, h1, h1, h3, h4, h5, h6, pre, form, fieldset, input, p, blockquote, th, td
+{ margin: 0; padding: 0;}
+
+/*Normalizes font-size for headers*/
+h1, h2, h3, h4, h5, h6
+{ font-size: 100%;}
+h3, h4 { padding: 5px 0; }
+/*Removes list-style from lists*/
+ol,ul
+{ list-style: none;}
+
+/*Normalizes font-style and font-weight to normal*/
+address, caption, cite, code, dfn, em, strong, th, var
+{ font-style: normal; font-weight: normal;}
+
+/*Collapses all tables*/
+table
+{ border-collapse: collapse; border-spacing: 0;}
+
+/*Removes borders from fieldset and img*/
+fieldset, img
+{ border: 0;}
+
+/*Left-aligns text in caption and th*/
+caption, th
+{ text-align: left;}
+
+/*Removes quotations from q*/
+q:before, q:after
+{ content: '';}
+
+/*Aligns entire html page and starts layout.css-------------------------------------------------*/
+html
+{ text-align: center; background: #FFFFFF url(../images/htmlBkgd.png) repeat-x top center; }
+
+/*ALPHA FIXES FOR PNGS IE 6 - NEED TRANSPARENT.GIF ************************************************************/
+* html img,
+* html img a:hover,
+* html .png,{
+    position:relative;
+    behavior: expression((this.runtimeStyle.behavior="none")&&(this.pngSet?this.pngSet=true:(this.nodeName == "IMG" && this.src.toLowerCase().indexOf('.png')>-1?(this.runtimeStyle.backgroundImage = "none",
+        this.runtimeStyle.filter = "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='" + this.src + "', sizingMethod='image')",
+        this.src = "transparent.gif"):(this.origBg = this.origBg? this.origBg :this.currentStyle.backgroundImage.toString().replace('url("','').replace('")',''),
+        this.runtimeStyle.filter = "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='" + this.origBg + "', sizingMethod='crop')",
+        this.runtimeStyle.backgroundImage = "none")),this.pngSet=true)
+    );
+}
+
+/*clearfix*/
+.clearfix {
+	content: ".";
+	display: block;
+	visibility: hidden;
+	height: 0;
+	clear: both;
+	}
+
+.clearfix { display: inline-block; }
+
+/*Aligns body to center and sets width, aligns text left*/
+body {
+	width: 100%;
+	text-align: left;
+	position: relative;
+	font: small/1.2 Verdana, Arial, Helvetica, sans-serif;
+	}
+	
+p { margin-bottom: 10px; }
+
+a {
+	color: #0066CC;
+	text-decoration: none;
+	}
+a:hover {
+	text-decoration: underline;
+	}
+
+/* =CLASSES */
+.selectedApp { color: #990000; border-left: 5px solid #333333; padding-left: 5px; }
+.dimmedApp { color: #999999; }
+.bold { font-weight: bold; }
+ul.liSpace li { margin: 5px 0; }
+.leftImg { padding: 2px; margin: 5px 5px 5px 0; border: 1px solid #333333; float: left; }
+.date { font-size: smaller; color: #666666; }
+.cmsTable td { padding: 4px; }
+.cmsTable tr { padding: 5px 0; }
+.blackBottom { border-bottom: 4px solid #000000; }
+
+/* = wrapper */
+#wrapper { width: 900px; margin: 0 auto; }
+
+/* =branding */
+#branding {
+	width: 900px;
+	border-bottom: 6px solid #000000;
+	margin-bottom: 20px;
+	}
+#branding a img { border: none; }
+#branding h1 { display: none; }
+
+/* = navigation */
+#navigation {
+	width: 125px;
+	float: left;
+	margin: 5px 5px 20px 0;
+	background: #cccccc;
+	}
+#nav1 { width: 125px; float: left; }
+#nav1 li { height: 35px; float: left; }
+#nav1 li a {
+	color: #FFFFFF;
+	float: left;
+	width: 105px;
+	text-decoration: none;
+	padding: 10px 10px;
+	background: #0066CC;
+	}
+#nav1 li a:hover {
+	background: #0099CC;
+	color: #FFFFFF;
+	}
+#nav1 li#home {
+	border-top: 1px solid #cccccc;
+	}
+
+/* = content_main */
+#content_main {
+	width: 550px;
+	float: left;
+	padding: 0 5px 5px 5px;
+	margin: 5px;
+	}
+#content_main_app {
+	width: 715px;
+	float: left;
+	padding: 0 5px 5px 5px;
+	margin: 5px;
+	}
+#content_main h2, #content_main_app h2 {
+	height: 25px;
+	font: 15px Verdana, Arial, Helvetica, sans-serif;
+	color: #006699;
+	padding: 5px 2px 2px 40px;
+	margin-top: 0;
+	font-weight: bolder;
+	background: transparent url(../images/pawprint.png) no-repeat top left;
+	}
+#content_main h3, #content_main_app h3 {
+	font: 15px Verdana, Arial, Helvetica, sans-serif;
+	color: #006699;
+	margin-bottom: 10px;
+	font-weight: bolder;
+	border-bottom: 1px dotted #cccccc;
+	}
+#content_main ul {
+	list-style: square;
+	padding-left: 15px;
+	}
+	
+/* =FRONT PAGE DIVS */
+div#news { width: 290px; float: left; padding: 5px; }
+div#quick { width: 225px; float: right; padding: 5px; }
+
+/* = sidebar */
+#sidebar {
+	width: 160px;
+	float: right;
+	padding: 0 5px 5px 5px;
+	margin: 5px 0 5px 5px;
+	}
+#sidebar h2 {
+	font: 14px Verdana, Arial, Helvetica, sans-serif;
+	color: #666666;
+	margin: 5px 0;
+	font-weight: bold;
+	padding: 0 0 0 5px;
+	border-left: 5px solid #0066CC;
+	}
+
+/* = site_info */
+#site_info {
+	width: 900px;
+	clear: both;
+	background: #000000;
+	padding: 7px;
+	height: 15px;
+	color: #FFFFFF;
+	margin-bottom: 20px;
+	}
+#site_info p { padding: 0; margin: 0;}
+#site_info p#copyright { float: left; }
+#site_info p#design { float: right; }
+
+/* =contactTable */
+#contactTable {
+	margin-left: 5px;
+	}
+#contactTable td { padding: 4px; }
+
+/* =formTable */
+.formTable { width: 700px; border-collapse: collapse; }
+.formTable tr { padding: 5px 0; }
+
+/* =stageIndicator */
+#stageIndicator ul li {
+	display: inline;
+	}
+#stageIndicator { margin: 20px 0 10px 0; }
+
+/* =MORE CLASSES FOR MEET THE DOGS */
+ul.ulNoBullets { padding: 0; margin: 0; }
+ul.ulNoBullets li { list-style: none; padding: 20px 0 20px 0; margin: 0; }
+ul.ulNoBullets h3 { padding: 0; margin: 5px 0; }
+span.blue { font-weight: bold; color: #0066cc; }
+table.details { border-collapse: collapse; border: 1px solid #333333; background: #0066CC; color: #FFFFFF; clear: both; }
+table.details tr { margin: 5px 0; }
+table.details tr.head { background: #000000; }
+table.details td { padding: 5px; text-align: center; }
+
+/* =LINKS CLASSES */
+ul#links { list-style: none; float: left; }
+ul#links li { width: 540px; clear: both; }
+ul#links a { width: 540px; padding: 5px; color: #333333; background: #FFFFFF; float: left; text-decoration: none; border: 1px solid #0066CC; margin: 2px 0; }
+ul#links a:hover { background: #cccccc; color: #0066CC; }
+ul#links p { margin: 0; padding: 0; }
+ul#links p.linkName { font: large Geneva, Arial, Helvetica, sans-serif; color: #000000; }
+ul#links p.linkURL { color: #999999; font: smaller; }
+ul#links p.linkDesc { padding: 5px 0; }
+.clearAll { clear: both; }
+
+/* =SUCCESS STORIES */
+ul#successStories { list-style: none; float: left; }
+ul#successStories p#successContent img { float: left; padding: 2px; margin: 5px; border: 1px solid #333333; }
+ul#successStories p#successFamily { clear: both; padding: 4px; }
+
+/* =CONTACT FORM */
+#contactDiv fieldset { float: left; width: 550px; border: 1px solid #000000; padding: 10px; }
+#contactDiv label { float: left; padding-right: 10px; width: 100px; text-align:right; }
+#contactDiv legend { color: #0066CC; }
+#contactDiv fieldset p { padding: 5px 0; margin: 5px 0; }
+#contactDiv #submit { margin-left: 110px; }
+input { background: #FFFFFF; }
+textarea { background: #FFFFFF; }
+
+/* =FOSTER FORM */
+#fosterDiv fieldset { float: left; width: 670px; border: 1px solid #000000; padding: 10px; }
+#fosterDiv label { float: left; padding-right: 10px; width: 100px; text-align:right; }
+#fosterDiv legend { color: #0066CC; }
+#fosterDiv fieldset p { padding: 5px 0; margin: 5px 0; }
+#fosterDiv #submit { margin-left: 110px; }
+input { background: #FFFFFF; }
+textarea { background: #FFFFFF; }
+.formLeft { float: left; }
+.formRight { float: right; }
+fieldset { margin-bottom: 20px; }
+
+/* =ADOPTION FORM */
+#adoptDiv fieldset { float: left; width: 670px; border: 1px solid #000000; padding: 10px; }
+#adoptDiv label { float: left; padding-right: 10px; width: 100px; text-align:right; }
+#adoptDiv legend { color: #0066CC; }
+#adoptDiv fieldset p { padding: 5px 0; margin: 5px 0; }
+#adoptDiv #submit { margin-left: 110px; }
+input { background: #FFFFFF; }
+textarea { background: #FFFFFF; }
+.formLeft { float: left; }
+.formRight { float: right; }
+fieldset { margin-bottom: 20px; }

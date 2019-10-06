@@ -1,0 +1,202 @@
+<style type="text/css">
+	td { padding: 5px; }
+	label { padding-right: 10px; }
+</style>
+<script type="text/javascript">
+<!--
+function MM_validateForm() { //v4.0
+  if (document.getElementById){
+    var i,p,q,nm,test,num,min,max,errors='',args=MM_validateForm.arguments;
+    for (i=0; i<(args.length-2); i+=3) { test=args[i+2]; val=document.getElementById(args[i]);
+      if (val) { nm=val.name; if ((val=val.value)!="") {
+        if (test.indexOf('isEmail')!=-1) { p=val.indexOf('@');
+          if (p<1 || p==(val.length-1)) errors+='- '+nm+' must contain an e-mail address.\n';
+        } else if (test!='R') { num = parseFloat(val);
+          if (isNaN(val)) errors+='- '+nm+' must contain a number.\n';
+          if (test.indexOf('inRange') != -1) { p=test.indexOf(':');
+            min=test.substring(8,p); max=test.substring(p+1);
+            if (num<min || max<num) errors+='- '+nm+' must contain a number between '+min+' and '+max+'.\n';
+      } } } else if (test.charAt(0) == 'R') errors += '- '+nm+' is required.\n'; }
+    } if (errors) alert('The following error(s) occurred:\n'+'Make sure that all fields are filled out. Required fields are marked with an asterisk(*).');
+    document.MM_returnValue = (errors == '');
+} }
+//-->
+</script>
+<h3>Adoption Application - 4</h3>
+<p>Please answer all questions as thoroughly as possible. We want to match your new family member as closely as possible.</p>
+<div id="adoptDiv">
+<form action="apply.php" method="post" name="adoptionForm4" id="adoptionForm4" onsubmit="MM_validateForm('adoptASaintForOther','','R','signature1','','R');return document.MM_returnValue">
+<fieldset>
+	<legend>General Information</legend>
+    <div class="formLeft">
+    	<p>I would like to adopt a Saint for: *</p>
+      <p><select name="adoptASaintFor" size="8" multiple id="adoptASaintFor">
+        <option value="Protection">Protection</option>
+        <option value="Breeding">Breeding</option>
+        <option value="Kids">My Kids</option>
+        <option value="Companion">Companion</option>
+        <option value="Gift">Gift</option>
+        <option value="GuardDog">Guard Dog</option>
+        <option value="Obedience">Obedience Work</option>
+        <option value="Other">Other</option>
+      </select></p>
+      <p>Please specify other <input name="adoptASaintForOther" type="text" id="adoptASaintForOther" size="30" />
+      </p>
+      
+<p>Is everyone in your household agreeable to you adopting a rescue dog? *</p>
+    <p><label>
+		  <input type="radio" name="houseAgree" value="Yes" id="houseAgree_0" />
+Yes</label>
+		  <label>
+		  <input type="radio" name="houseAgree" value="No" id="houseAgree_1" />
+No</label>
+		  <br />
+		</p>
+        
+<p>If you have children, will you teach them to love and care for your Saint in a human manner? *</p>
+    <p><label>
+		  <input type="radio" name="teachChildren" value="Yes" id="teachChildren_0" />
+Yes</label>
+		  <label>
+		  <input type="radio" name="teachChildren" value="No" id="teachChildren_1" />
+No</label>
+		  <br />
+		</p>
+
+<p>Does anyone in your household have animal allergies? *</p>
+    <p><label>
+		  <input type="radio" name="allergies" value="Yes" id="allergies_0" />
+Yes</label>
+		  <label>
+		  <input type="radio" name="allergies" value="No" id="allergies_1" />
+No</label>
+		  <br />
+		</p>
+        
+<p>Does anyone in your household dislike dogs or other animals? *</p>
+    <p><label>
+		  <input type="radio" name="dislikeDogs" value="Yes" id="dislikeDogs_0" />
+Yes</label>
+		  <label>
+		  <input type="radio" name="dislikeDogs" value="No" id="dislikeDogs_1" />
+No</label>
+		  <br />
+		</p>
+<p>How many hours would the Saint be home alone for each day? *</p>
+<p>
+  <label>
+	    <input type="radio" name="hoursHome" value="Less than 1" id="hoursHome_0" /> 
+		  &lt;1</label>
+ 
+ <label><input type="radio" name="hoursHome" value="1 to 3" id="hoursHome_1" /> 
+		  1 to 3
+</label>
+
+		  <label>
+		  <input type="radio" name="hoursHome" value="3 to 5" id="hoursHome_0" /> 
+		  3 to 5
+</label>
+
+		  <label>
+		  <input type="radio" name="hoursHome" value="5+" id="hoursHome_1" /> 
+		  5+
+</label>
+		  <br /><br />
+<p>I live in a: *</p> 
+  <p><label>
+  <input type="radio" name="homeType" value="House" id="homeType_0" />
+House</label>
+
+  <label>
+  <input type="radio" name="homeType" value="Apartment" id="homeType_1" />
+Apartment</label>
+
+  <label>
+  <input type="radio" name="homeType" value="Condo" id="homeType_2" />
+Condo</label>
+
+  <label>
+  <input type="radio" name="homeType" value="Mobile Home" id="homeType_3" />
+Mobile</label>
+
+  <label>
+  <input type="radio" name="homeType" value="Farm" id="homeType_4" />
+Farm</label>
+<br /><br />
+		</p>
+<p>Do you rent or own your house? *</p>
+    <p><label>
+		  <input type="radio" name="rentOrOwn" value="Rent" id="rentOrOwn_0" />
+Rent</label>
+		  <label>
+		  <input type="radio" name="rentOrOwn" value="Own" id="rentOrOwn_1" />
+Own</label>
+		  <br />
+		</p>
+        </div>
+ </fieldset>
+    <fieldset>
+    	<legend>Landlord's Information</legend>
+    <div class="formLeft">
+    <p>If rent, list the landlord's information.</p>
+    <p><label for="landlordName">Name</label><input name="landlordName" type="text" size="30" /></p>
+    <p><label for="landlordAddress">Address</label><input name="landlordAddress" type="text" size="40" /></p>  
+    <p><label for="fenceAreaSize">Phone</label>
+    <input name="landlordPhone" type="text" size="15" /></p>
+    <p>If renting, be advised that you must provide written documentation to SBRF from your landlord confirming that you are authorized to house and maintain pets on the property(i.e., letter from landlord, pet addendum, or proof of pet deposits).</p>            
+    </div>                     	     
+</fieldset>
+<fieldset>
+    	<legend>Yard Information</legend>
+        <div class="formLeft">
+        	<p>If you have a fenced yard, please provide details.</p>
+            <p><label for="fenceHeight">Fence Height</label><input name="fenceHeight" type="text" size="15" /></p>
+            <p><label for="fenceType">Fence Type</label><input name="fenceType" type="text" size="30" /></p>
+            <p><label for="fenceAreaSize">Fence Size</label>
+          <input name="fenceAreaSize" type="text" size="15" id="fenceAreaSize" />
+           (sq. ft.)</p>
+<p>If your yard is not currently fenced, are you willing to install a fence or leash walk at all times? *</p>
+		  <p><label>
+		  <input type="radio" name="leashWalk" value="Yes" id="leashWalk_0" />
+Yes</label>
+		  <label>
+		  <input type="radio" name="leashWalk" value="No" id="leashWalk_1" />
+No</label>
+		  <br />
+		</p>
+        <p>Do you feel it is acceptable to let a dog roam freely? *</p>
+		  <p><label>
+		  <input type="radio" name="roamFreely" value="Yes" id="roamFreely_0" />
+Yes</label>
+		  <label>
+		  <input type="radio" name="roamFreely" value="No" id="roamFreely_1" />
+No</label>
+		  <br />
+		</p>            
+        </div>
+    </fieldset>
+<fieldset>
+	<legend>Adoption Acknowledgement</legend>
+    <div class="formLeft">
+    	<p>ALL OF THE INFORMATION I HAVE PROVIDED IN THIS APPLICATION IS, TO THE BEST OF MY KNOWLEDGE, TRUE AND COMPLETE. I UNDERSTAND THAT FALSIFYING ANSWERS IN THIS APPLICATION OR AT ANY OTHER TIME DURING THE ADOPTION PROCESS DISQUALIFIES ME FROM ADOPTION.</p>
+        <p>BY TYPING BELOW, YOU ARE SIGNING THIS DOCUMENT AND AGREEING TO THE TERMS LISTED ABOVE. YOU ALSO AGREE TO PAY THE CURRENT ADOPTION FEE WHICH IS $275.00. THIS FEE COVERS MEDICAL AND OTHER EXPENSES ASSOCIATED WITH RESCUING SAINTS.</p>
+        <p>Signatures of adopting person(s):</p>
+        <p><label for="signature1">X</label><input name="signature1" type="text" id="signature1" size="30" />
+*</p>
+      <p><label for="signature2">X</label><input name="signature2" type="text" size="30" /></p>
+                    <p>Would you like to be added to our E-Mail Group?</p>
+            
+		  <p><label>
+		  <input type="radio" name="mailingList" value="Yes" id="mailingList_0" />
+Yes</label>
+		  <label>
+		  <input type="radio" name="mailingList" value="No" id="mailingList_1" />
+No</label>
+		  <br />
+		</p>
+        <p>Double check all answers before submitting, you will not be able to go back to edit this page. You will receive a copy of this application via E-Mail with more details on what happens next. Thank you for your application.</p>
+        <p><input type="submit" name="submitStage4" id="submitStage4" value="Submit Application" onclick="return confirm('Submit final application, are you sure?');" /></p>
+    </div>
+</fieldset>
+</form>
+</div>

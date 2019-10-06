@@ -1,0 +1,144 @@
+<style type="text/css">
+	td { padding: 5px; }
+	label { padding-right: 10px; }
+</style>
+<script type="text/javascript">
+<!--
+function MM_validateForm() { //v4.0
+  if (document.getElementById){
+    var i,p,q,nm,test,num,min,max,errors='',args=MM_validateForm.arguments;
+    for (i=0; i<(args.length-2); i+=3) { test=args[i+2]; val=document.getElementById(args[i]);
+      if (val) { nm=val.name; if ((val=val.value)!="") {
+        if (test.indexOf('isEmail')!=-1) { p=val.indexOf('@');
+          if (p<1 || p==(val.length-1)) errors+='- '+nm+' must contain an e-mail address.\n';
+        } else if (test!='R') { num = parseFloat(val);
+          if (isNaN(val)) errors+='- '+nm+' must contain a number.\n';
+          if (test.indexOf('inRange') != -1) { p=test.indexOf(':');
+            min=test.substring(8,p); max=test.substring(p+1);
+            if (num<min || max<num) errors+='- '+nm+' must contain a number between '+min+' and '+max+'.\n';
+      } } } else if (test.charAt(0) == 'R') errors += '- '+nm+' is required.\n'; }
+    } if (errors) alert('The following error(s) occurred:\n'+'Make sure that all fields are filled out. Required fields are marked with an asterisk(*).');
+    document.MM_returnValue = (errors == '');
+} }
+//-->
+</script>
+<h3>Adoption Application - 3</h3>
+<p>Please answer all questions as thoroughly as possible. We want to match your new family member as closely as possible.</p>
+<div id="adoptDiv">
+<form action="apply.php" method="post" name="adoptionForm3" id="adoptionForm3" onsubmit="MM_validateForm('whereWouldSaintSleep','','R','careWhenGone','','R','trainingMethod','','R','whatLookingFor','','R');return document.MM_returnValue">
+<fieldset>
+	<legend>Caring for a Saint</legend>
+    <div class="formLeft">
+   	<p>During the day, the Saint would mostly be in the: *</p>
+<p>
+  <label>
+	    <input type="radio" name="daytimePlace" value="House" id="daytimePlace_0" /> 
+		  House</label>
+ 
+ <label><input type="radio" name="daytimePlace" value="Yard" id="daytimePlace_1" /> 
+		  Yard
+</label>
+
+		  <label>
+		  <input type="radio" name="daytimePlace" value="Garage" id="daytimePlace_0" /> 
+		  Garage
+</label>
+
+		  <label>
+		  <input type="radio" name="daytimePlace" value="Other" id="daytimePlace_1" /> 
+		  Other
+</label>
+		  <br /><br />
+	  <p>Please specify other <input type="text" size="30" name="specifyOtherPlace" /></p>
+      <p>During the night, the Saint would sleep where? <input name="whereWouldSaintSleep" type="text" id="whereWouldSaintSleep" size="30" />
+      *</p>
+<p>Are you willing to have a home check before adopting? *</p><p>
+		  <label>
+		  <input type="radio" name="homeCheck" value="Yes" id="homeCheck_0" />
+Yes</label>
+
+		  <label>
+		  <input type="radio" name="homeCheck" value="No" id="homeCheck_1" />
+No</label>
+		  <br />
+		</p>
+<p>Are you willing to housebreak a dog? *</p>
+<p>
+		  <label>
+		  <input type="radio" name="houseBreak" value="Yes" id="houseBreak_0" />
+Yes</label>
+
+		  <label>
+		  <input type="radio" name="houseBreak" value="No" id="houseBreak_1" />
+No</label>
+		  <br />
+		</p>
+        <p>Are you aware that the vet bills for routine care of a Saint may cost between $100 and $500 or more per year? *</p>
+<p>
+		  <label>
+		  <input type="radio" name="expensiveCare" value="Yes" id="expensiveCare_0" />
+Yes</label>
+		  <label>
+		  <input type="radio" name="expensiveCare" value="No" id="expensiveCare_1" />
+No</label>
+		  <br />
+		</p>
+        <p>Are you willing to welcome a Saint into your family as a family member with a vow to care for it for its lifetime? *</p>
+<p>
+		  <label>
+		  <input type="radio" name="vowForLifetime" value="Yes" id="vowForLifetime_0" />
+Yes</label>
+
+		  <label>
+		  <input type="radio" name="vowForLifetime" value="No" id="vowForLifetime_1" />
+No</label>
+		  <br />
+		</p>
+        </div>
+    </fieldset>
+	<fieldset>
+    	<legend>The following is required if you have pets.</legend>
+        <div class="formLeft">
+<p>Name, address and phone number of current or last veterinarian:</p>
+		<p><label for="vetName">Name</label><input name="vetName" type="text" size="30" /></p>
+        <p><label for="vetAddress">Address</label><input name="vetAddress" type="text" size="30" /></p>
+        <p><label for="vetCity">City</label><input name="vetCity" type="text" size="30" /></p>
+        <p><label for="vetPhone">Phone</label><input name="vetPhone" type="text" size="15" /></p>  
+    </div>
+</fieldset>
+<fieldset>
+	<legend>Training for a Lifetime</legend>
+	<div class="formLeft">
+    	<p>When you go away for a few days, who will care for the dog?</p>
+        <p><label for="careWhenGone">Name/Relation</label><input name="careWhenGone" type="text" id="careWhenGone" size="30" />
+      *</p>
+<p>Do you realize that Saints shed profusely (especially during the summer months), often drool or slobber and are prone to hip problems? *</p>
+    <p><label>
+		  <input type="radio" name="awareOfSaintProblems" value="Yes" id="awareOfSaintProblems_0" />
+Yes</label>
+		  <label>
+		  <input type="radio" name="awareOfSaintProblems" value="No" id="awareOfSaintProblems_1" />
+No</label>
+		  <br />
+		</p>  
+<p>Have you obedience trained a dog? *</p>
+    <p><label>
+		  <input type="radio" name="obedienceTrained" value="Yes" id="obedienceTrained_0" />
+Yes</label>
+		  <label>
+		  <input type="radio" name="obedienceTrained" value="No" id="obedienceTrained_1" />
+No</label>
+		  <br />
+		</p>
+       	<p>Explain what training method and collars you prefer:</p>
+        <p><label for="trainingMethod">Method(s)</label><textarea name="trainingMethod" cols="30" rows="3" id="trainingMethod"></textarea>
+      *</p> 
+        <p>What specifics are you looking for in a Saint? If you are interested in adopting a particular <a target="_blank" href="dogs.php">dog</a> (opens a new window), please specify it's name, and give your reason(s):</p>
+        <p><label for="whatLookingFor">Detail(s)</label><textarea name="whatLookingFor" cols="30" rows="3" id="whatLookingFor"></textarea>
+      *</p> 
+        <p>Double check all answers before submitting, you will not be able to go back to edit this page.</p>
+        <p><input type="submit" name="submitStage3" id="submitStage3" value="Next Step" onclick="return confirm('Submit Stage 3, are you sure?');" /></p>    
+    </div>
+</fieldset>
+</form>
+</div>

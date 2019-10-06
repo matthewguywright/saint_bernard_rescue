@@ -1,0 +1,269 @@
+<style type="text/css">
+	td { padding: 5px; }
+	label { padding-right: 10px; }
+</style>
+<h3>Adoption Application - 2</h3>
+<p>Please answer all questions as thoroughly as possible. We want to match your new family member as closely as possible.</p>
+<form action="apply.php" method="post" name="adoptionForm2" id="adoptionForm2">
+<table border="0" cellpadding="0" cellspacing="0" class="formTable">
+  <tr>
+    <td colspan="2">Have you owned a Saint Bernard before?</td>
+    <td colspan="2"><table width="200">
+      <tr>
+        <td><label>
+          <input type="radio" name="ownedBernardBefore" value="Yes" id="ownedBernardBefore_0">
+          Yes</label></td>
+      </tr>
+      <tr>
+        <td><label>
+          <input type="radio" name="ownedBernardBefore" value="No" id="ownedBernardBefore_1">
+          No</label></td>
+      </tr>
+    </table>    </td>
+  </tr>
+  <tr>
+    <td colspan="4">What happened to the dog?</td>
+    </tr>
+  <tr>
+    <td colspan="4"><textarea name="bernardWhatHappened" id="bernardWhatHappened" cols="60" rows="5"></textarea></td>
+    </tr>
+  <tr>
+    <td colspan="4">How or where have you learned about this breed?</td>
+    </tr>
+  <tr>
+    <td colspan="4"><textarea name="whereLearned" id="whereLearned" cols="60" rows="5"></textarea></td>
+    </tr>
+  <tr>
+    <td colspan="4">Tell us what you're looking for:</td>
+    </tr>
+  <tr>
+    <td width="277">Coat Length</td>
+    <td colspan="3"><table width="200">
+      <tr>
+        <td><label>
+          <input type="radio" name="coatLength" value="Long" id="coatLength_0">
+          Long</label></td>
+      </tr>
+      <tr>
+        <td><label>
+          <input type="radio" name="coatLength" value="Short" id="coatLength_1">
+          Short</label></td>
+      </tr>
+    </table>    </td>
+    </tr>
+  <tr>
+    <td>Sex</td>
+    <td colspan="3"><table width="200">
+      <tr>
+        <td><label>
+          <input type="radio" name="desiredSex" value="Male" id="desiredSex_0">
+          Male</label></td>
+      </tr>
+      <tr>
+        <td><label>
+          <input type="radio" name="desiredSex" value="Female" id="desiredSex_1">
+          Female</label></td>
+      </tr>
+    </table>    </td>
+    </tr>
+  <tr>
+    <td>Age</td>
+    <td colspan="3"><table width="200">
+      <tr>
+        <td><label>
+          <input type="radio" name="desiredAge" value="Less than 1 year" id="desiredAge_0">
+          Less than 1 year</label></td>
+      </tr>
+      <tr>
+        <td><label>
+          <input type="radio" name="desiredAge" value="1 to 3" id="desiredAge_1">
+          1 to 3</label></td>
+      </tr>
+      <tr>
+        <td><label>
+          <input type="radio" name="desiredAge" value="3 to 5" id="desiredAge_2">
+          3 to 5</label></td>
+      </tr>
+      <tr>
+        <td><label>
+          <input type="radio" name="desiredAge" value="5+" id="desiredAge_3">
+          5+</label></td>
+      </tr>
+    </table>    </td>
+    </tr>
+  <tr>
+    <td colspan="4">Are you willing to adopt a dog that:</td>
+    </tr>
+  <tr>
+    <td> Is 8 years of age or older?</td>
+    <td colspan="3"><table width="200">
+      <tr>
+        <td><label>
+          <input type="radio" name="olderThanEight" value="Yes" id="olderThanEight_0">
+          Yes</label></td>
+      </tr>
+      <tr>
+        <td><label>
+          <input type="radio" name="olderThanEight" value="No" id="olderThanEight_1">
+          No</label></td>
+      </tr>
+    </table>    </td>
+    </tr>
+  <tr>
+    <td>Is not reliable with children?</td>
+    <td colspan="3"><table width="200">
+      <tr>
+        <td><label>
+          <input type="radio" name="notReliableWithChildren" value="Yes" id="notReliableWithChildren_0">
+          Yes</label></td>
+      </tr>
+      <tr>
+        <td><label>
+          <input type="radio" name="notReliableWithChildren" value="No" id="notReliableWithChildren_1">
+          No</label></td>
+      </tr>
+    </table>    </td>
+    </tr>
+  <tr>
+    <td>Is physically handicapped?</td>
+    <td colspan="3"><table width="200">
+      <tr>
+        <td><label>
+          <input type="radio" name="handicapped" value="Yes" id="handicapped_0">
+          Yes</label></td>
+      </tr>
+      <tr>
+        <td><label>
+          <input type="radio" name="handicapped" value="No" id="handicapped_1">
+          No</label></td>
+      </tr>
+    </table>    </td>
+    </tr>
+  <tr>
+    <td>Has been abused?</td>
+    <td colspan="3"><table width="200">
+      <tr>
+        <td><label>
+          <input type="radio" name="abused" value="Yes" id="abused_0">
+          Yes</label></td>
+      </tr>
+      <tr>
+        <td><label>
+          <input type="radio" name="abused" value="No" id="abused_1">
+          No</label></td>
+      </tr>
+    </table>    </td>
+    </tr>
+  <tr>
+    <td>Requires ongoing medications?</td>
+    <td colspan="3"><table width="200">
+      <tr>
+        <td><label>
+          <input type="radio" name="needsMeds" value="Yes" id="needsMeds_0">
+          Yes</label></td>
+      </tr>
+      <tr>
+        <td><label>
+          <input type="radio" name="needsMeds" value="No" id="needsMeds_1">
+          No</label></td>
+      </tr>
+    </table>    </td>
+    </tr>
+  <tr>
+    <td>On occasion we receive pairs of Saints that have bonded and need to remain together. Would you consider adopting such a pair?</td>
+    <td colspan="3"><table width="200">
+      <tr>
+        <td><label>
+          <input type="radio" name="adoptPair" value="Yes" id="adoptPair_0">
+          Yes</label></td>
+      </tr>
+      <tr>
+        <td><label>
+          <input type="radio" name="adoptPair" value="No" id="adoptPair_1">
+          No</label></td>
+      </tr>
+    </table>    </td>
+  </tr>
+  <tr>
+    <td>If you have chosen a particular dog, would you be willing to take another if the dog you chose has a medical or other problem that would prohibit the adoption at this time?</td>
+    <td colspan="3"><table width="200">
+      <tr>
+        <td><label>
+          <input type="radio" name="takeAnother" value="Yes" id="takeAnother_0">
+          Yes</label></td>
+      </tr>
+      <tr>
+        <td><label>
+          <input type="radio" name="takeAnother" value="No" id="takeAnother_1">
+          No</label></td>
+      </tr>
+    </table>    </td>
+  </tr>
+  <tr>
+    <td>Are you aware that Saint Bernard Rescue Foundation, Inc. requests an adoption fee for each adoption to help cover expenses in readying dogs for adoption?</td>
+    <td colspan="3"><table width="200">
+      <tr>
+        <td><label>
+          <input type="radio" name="requestFee" value="Yes" id="requestFee_0">
+          Yes</label></td>
+      </tr>
+      <tr>
+        <td><label>
+          <input type="radio" name="requestFee" value="No" id="requestFee_1">
+          No</label></td>
+      </tr>
+    </table>    </td>
+  </tr>
+  <tr>
+    <td>Are you prepared to pay this fee?</td>
+    <td colspan="3"><table width="200">
+      <tr>
+        <td><label>
+          <input type="radio" name="payFee" value="Yes" id="payFee_0">
+          Yes</label></td>
+      </tr>
+      <tr>
+        <td><label>
+          <input type="radio" name="payFee" value="No" id="payFee_1">
+          No</label></td>
+      </tr>
+    </table>    </td>
+  </tr>
+  <tr>
+    <td colspan="4">What characteristics do you find undesirable in a pet?</td>
+    </tr>
+  <tr>
+    <td colspan="4"><textarea name="undesirableChar" id="undesirableChar" cols="60" rows="5"></textarea></td>
+  </tr>
+  <tr>
+    <td colspan="4">Personal references - must include a neighbor and exclude relatives who are employed in a pet-related field.</td>
+  </tr>
+  <tr>
+    <td colspan="2" align="left" valign="top">Name</td>
+    <td width="320" align="left" valign="top">Address</td>
+    <td width="378" align="left" valign="top">Phone</td>
+  </tr>
+  <tr>
+    <td colspan="2" align="left" valign="top"><input name="refName1" type="text" id="refName1" size="30" /></td>
+    <td align="left" valign="top"><textarea name="refAddress1" id="refAddress1" cols="45" rows="2"></textarea></td>
+    <td align="left" valign="top"><input type="text" name="refPhone1" id="refPhone1" /></td>
+  </tr>
+  <tr>
+    <td colspan="2" align="left" valign="top"><input name="refName2" type="text" id="refName2" size="30" /></td>
+    <td align="left" valign="top"><textarea name="refAddress2" id="refAddress2" cols="45" rows="2"></textarea></td>
+    <td align="left" valign="top"><input type="text" name="refPhone2" id="refPhone2" /></td>
+  </tr>
+  <tr>
+    <td colspan="2" align="left" valign="top"><input name="refName3" type="text" id="refName3" size="30" /></td>
+    <td align="left" valign="top"><textarea name="refAddress3" id="refAddress3" cols="45" rows="2"></textarea></td>
+    <td align="left" valign="top"><input type="text" name="refPhone3" id="refPhone3" /></td>
+  </tr>
+  <tr>
+    <td colspan="4" align="left" valign="top">Double check all answers before submitting, you will not be able to go back to edit this page.</td>
+    </tr>
+  <tr>
+    <td colspan="4" align="left" valign="top"><input type="submit" name="submitStage2" id="submitStage2" value="Next Step" /></td>
+  </tr>
+</table>
+
+</form>

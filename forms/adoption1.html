@@ -1,0 +1,329 @@
+<style type="text/css">
+	td { padding: 5px; }
+	label { padding-right: 10px; }
+</style>
+<script type="text/javascript">
+<!--
+function MM_validateForm() { //v4.0
+  if (document.getElementById){
+    var i,p,q,nm,test,num,min,max,errors='',args=MM_validateForm.arguments;
+    for (i=0; i<(args.length-2); i+=3) { test=args[i+2]; val=document.getElementById(args[i]);
+      if (val) { nm=val.name; if ((val=val.value)!="") {
+        if (test.indexOf('isEmail')!=-1) { p=val.indexOf('@');
+          if (p<1 || p==(val.length-1)) errors+='- '+nm+' must contain an e-mail address.\n';
+        } else if (test!='R') { num = parseFloat(val);
+          if (isNaN(val)) errors+='- '+nm+' must contain a number.\n';
+          if (test.indexOf('inRange') != -1) { p=test.indexOf(':');
+            min=test.substring(8,p); max=test.substring(p+1);
+            if (num<min || max<num) errors+='- '+nm+' must contain a number between '+min+' and '+max+'.\n';
+      } } } else if (test.charAt(0) == 'R') errors += '- '+nm+' is required.\n'; }
+    } if (errors) alert('The following error(s) occurred:\n'+'Make sure that all fields are filled out. Required fields are marked with an asterisk(*).');
+    document.MM_returnValue = (errors == '');
+} }
+//-->
+</script>
+<p class="bold">Before starting the application process, make sure you have read the <a href="adopt.php">Adoption Process</a>.</p>
+<h3>Adoption Application - 1</h3>
+<p>Please answer all questions as thoroughly as possible. We want to match your new family member as closely as possible.</p>
+<!--PAGE 1-->
+<div id="adoptDiv">
+<form action="apply.php" method="post" name="adoptionForm1" id="adoptionForm1" onsubmit="MM_validateForm('Name','','R','address','','R','city','','R','state','','R','zip','','R','email','','RisEmail','homePhone','','R','workPhone','','R','occupation','','R','numAdults','','R','numChildren','','R','whoWillCare','','R','houseMembers','','R');return document.MM_returnValue">
+<fieldset>
+	<legend>Personal Information</legend>
+    <div class="formLeft">
+    <p><label for="Name">Name</label><input name="Name" type="text" id="Name" size="30" />
+    *</p>
+    <p><label for="Name">Spouse</label><input name="Spouse" type="text" size="30" /></p>
+    <p><label for="address">Address</label><input name="address" type="text" id="address" size="50" />
+    *</p>
+    <p><label for="city">City</label><input name="city" type="text" id="city" size="40" />
+    *</p>
+    <p><label for="state">State</label><input name="state" type="text" id="state" size="40" />
+    *
+    </p>
+    <p><label for="zip">Zip</label><input name="zip" type="text" id="zip" size="10" />
+    *</p>
+    <p><label for="email">E-mail</label><input name="email" type="text" id="email" size="40" />
+    *</p>
+    </div>
+    <div class="formRight">
+    <p><label for="homePhone">Home Phone</label><input name="homePhone" type="text" id="homePhone" size="15" />
+    *</p>
+    <p><label for="workPhone">Work Phone</label><input name="workPhone" type="text" id="workPhone" size="15" />
+    </p>
+    <p><label for="occupation">Occupation</label><input name="occupation" type="text" id="occupation" size="20" />
+    *
+    </p>
+    <p><label for="numAdults"># Adults</label><input name="numAdults" type="text" id="numAdults" size="15" />
+    *</p>
+    <p><label for="numChildren"># Children</label><input name="numChildren" type="text" id="numChildren" size="15" />
+    *
+    </p>
+    <p><label for="ageChildren">Children's Ages</label><input name="ageChildren" type="text" size="20" /></p>
+    </div>
+    <div class="formLeft">    
+    <p>If less than 5 years, give previous address below.</p>
+    <p><label for="previousAddress">Address</label><textarea name="previousAddress" cols="30" rows="3"></textarea></p>
+    <p>Please list names and ages of all members of the household (list each member on a new line):</p>
+    <p><label for="houseMembers">House Members</label><textarea name="houseMembers" cols="30" rows="3" id="houseMembers"></textarea>
+    *
+    </p>
+    <p>Which family members will feed/care for the Saint(s)? <input name="whoWillCare" type="text" id="whoWillCare" size="30" />
+    *
+    </p>
+    </div>
+</fieldset>
+<fieldset>
+	<legend>Previous Pets</legend>
+    <div class="formLeft">    
+    <p>What other dogs have you owned in the last 3 years?</p>
+	<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="19%" align="left" valign="top"><div align="center">Breed</div></td>
+    <td width="22%" align="left" valign="top"><div align="center">Sex</div></td>
+    <td width="14%" align="left" valign="top"><div align="center">Age</div></td>
+    <td width="22%" align="left" valign="top"><div align="center">Spayed/Neutered</div></td>
+    <td width="23%" align="left" valign="top"><div align="center">Still own?</div></td>
+  </tr>
+  <tr>
+    <td align="left" valign="top"><div align="center">
+      <input type="text" name="breed1" id="breed1" />
+    </div></td>
+    <td align="left" valign="top"><div align="center">
+      <table width="100">
+        <tr>
+          <td><label>
+            <input type="radio" name="sex1" value="Male" id="sex1_0" />
+            Male</label></td>
+          </tr>
+        <tr>
+          <td><label>
+            <input type="radio" name="sex1" value="Female" id="sex1_1" />
+            Female</label></td>
+          </tr>
+      </table>
+    </div></td>
+    <td align="left" valign="top"><div align="center">
+      <input name="age1" type="text" id="age1" size="5" />
+    </div></td>
+    <td align="left" valign="top"><div align="center">
+      <table width="70">
+        <tr>
+          <td><label>
+            <input type="radio" name="spayNeuter1" value="Yes" id="spayNeuter1_0" />
+            Yes</label></td>
+          </tr>
+        <tr>
+          <td><label>
+            <input type="radio" name="spayNeuter1" value="No" id="spayNeuter1_1" />
+            No</label></td>
+          </tr>
+      </table>
+    </div></td>
+    <td align="left" valign="top"><div align="center">
+      <table width="70">
+        <tr>
+          <td><label>
+            <input type="radio" name="stillOwn1" value="Yes" id="stillOwn_0" />
+            Yes</label></td>
+          </tr>
+        <tr>
+          <td><label>
+            <input type="radio" name="stillOwn1" value="No" id="stillOwn_1" />
+            No</label></td>
+          </tr>
+      </table>
+    </div></td>
+  </tr>
+  <tr>
+    <td align="left" valign="top"><div align="center">
+      <input type="text" name="breed2" id="breed2" />
+    </div></td>
+    <td align="left" valign="top"><div align="center">
+      <table width="100">
+          <tr>
+            <td><label>
+              <input type="radio" name="sex2" value="Male" id="sex1_2" />
+              Male</label></td>
+          </tr>
+          <tr>
+            <td><label>
+              <input type="radio" name="sex2" value="Female" id="sex1_3" />
+              Female</label></td>
+          </tr>
+          </table>
+    </div></td>
+    <td align="left" valign="top"><div align="center">
+      <input name="age2" type="text" id="age2" size="5" />
+    </div></td>
+    <td align="left" valign="top"><div align="center">
+      <table width="70">
+          <tr>
+            <td><label>
+              <input type="radio" name="spayNeuter2" value="Yes" id="spayNeuter1_2" />
+              Yes</label></td>
+          </tr>
+          <tr>
+            <td><label>
+              <input type="radio" name="spayNeuter2" value="No" id="spayNeuter1_3" />
+              No</label></td>
+          </tr>
+          </table>
+    </div></td>
+    <td align="left" valign="top"><div align="center">
+      <table width="70">
+          <tr>
+            <td><label>
+              <input type="radio" name="stillOwn2" value="Yes" id="stillOwn_2" />
+              Yes</label></td>
+          </tr>
+          <tr>
+            <td><label>
+              <input type="radio" name="stillOwn2" value="No" id="stillOwn_3" />
+              No</label></td>
+          </tr>
+          </table>
+    </div></td>
+  </tr>
+  <tr>
+    <td align="left" valign="top"><div align="center">
+      <input type="text" name="breed3" id="breed3" />
+    </div></td>
+    <td align="left" valign="top"><div align="center">
+      <table width="100">
+          <tr>
+            <td><label>
+              <input type="radio" name="sex3" value="Male" id="sex1_4" />
+              Male</label></td>
+          </tr>
+          <tr>
+            <td><label>
+              <input type="radio" name="sex3" value="Female" id="sex1_5" />
+              Female</label></td>
+          </tr>
+          </table>
+    </div></td>
+    <td align="left" valign="top"><div align="center">
+      <input name="age3" type="text" id="age3" size="5" />
+    </div></td>
+    <td align="left" valign="top"><div align="center">
+      <table width="70">
+          <tr>
+            <td><label>
+              <input type="radio" name="spayNeuter3" value="Yes" id="spayNeuter1_4" />
+              Yes</label></td>
+          </tr>
+          <tr>
+            <td><label>
+              <input type="radio" name="spayNeuter3" value="No" id="spayNeuter1_5" />
+              No</label></td>
+          </tr>
+          </table>
+    </div></td>
+    <td align="left" valign="top"><div align="center">
+      <table width="70">
+          <tr>
+            <td><label>
+              <input type="radio" name="stillOwn3" value="Yes" id="stillOwn_4" />
+              Yes</label></td>
+          </tr>
+          <tr>
+            <td><label>
+              <input type="radio" name="stillOwn3" value="No" id="stillOwn_5" />
+              No</label></td>
+          </tr>
+          </table>
+    </div></td>
+  </tr>
+  <tr>
+    <td align="left" valign="top"><div align="center">
+      <input type="text" name="breed4" id="breed4" />
+    </div></td>
+    <td align="left" valign="top"><div align="center">
+      <table width="100">
+          <tr>
+            <td><label>
+              <input type="radio" name="sex4" value="Male" id="sex1_6" />
+              Male</label></td>
+          </tr>
+          <tr>
+            <td><label>
+              <input type="radio" name="sex4" value="Female" id="sex1_7" />
+              Female</label></td>
+          </tr>
+          </table>
+    </div></td>
+    <td align="left" valign="top"><div align="center">
+      <input name="age4" type="text" id="age4" size="5" />
+    </div></td>
+    <td align="left" valign="top"><div align="center">
+      <table width="70">
+          <tr>
+            <td><label>
+              <input type="radio" name="spayNeuter4" value="Yes" id="spayNeuter1_6" />
+              Yes</label></td>
+          </tr>
+          <tr>
+            <td><label>
+              <input type="radio" name="spayNeuter4" value="No" id="spayNeuter1_7" />
+              No</label></td>
+          </tr>
+          </table>
+    </div></td>
+    <td align="left" valign="top"><div align="center">
+      <table width="70">
+          <tr>
+            <td><label>
+              <input type="radio" name="stillOwn4" value="Yes" id="stillOwn_6" />
+              Yes</label></td>
+          </tr>
+          <tr>
+            <td><label>
+              <input type="radio" name="stillOwn4" value="No" id="stillOwn_7" />
+              No</label></td>
+          </tr>
+          </table>
+    </div></td>
+  </tr>
+</table>
+	<br />
+    <p>If you answered "No" to still having a dog listed above, state what happened to the dog?</p>
+    <p><label for="whatHappened">Reason</label><textarea name="whatHappened" cols="30" rows="3"></textarea></p>
+<p>Are your pets up to date on all shots? *</p><p>
+		  <label>
+		  <input type="radio" name="shots" value="Yes" id="shots_0" />
+Yes</label>
+
+		  <label>
+		  <input type="radio" name="shots" value="No" id="shots_1" />
+No</label>
+		  <br />
+		</p>    
+<p>Are your pets on heartworm preventative? *</p><p>
+		  <label>
+		  <input type="radio" name="heartWorm" value="Yes" id="heartWorm_0" />
+Yes</label>
+
+		  <label>
+		  <input type="radio" name="heartWorm" value="No" id="heartWorm_1" />
+No</label>
+		  <br />
+		</p>
+<p>Have you owned Saints before? *</p><p>
+      <label>
+		  <input type="radio" name="ownedSaints" value="Yes" id="ownedSaints_0" />
+Yes</label>
+
+		  <label>
+		  <input type="radio" name="ownedSaints" value="No" id="ownedSaints_1" />
+No</label>
+		  <br />
+</p>
+      <p>Do you have other pets? (list each pet on a new line):</p>
+        <p><label for="otherPets">Pets</label><textarea name="otherPets" cols="30" rows="3"></textarea></p>
+        <p>Double check all answers before submitting, you will not be able to go back to edit this page.</p>
+        <p><input type="submit" name="submitStage1" id="submitStage1" value="Next Step" onclick="return confirm('Submit Stage 1, are you sure?');" /></p>
+    </div>
+</fieldset>
+</form>
+</div>
